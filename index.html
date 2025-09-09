@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sprite de íconos Gesty -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none">
             <path d="M12 3l7 3v5c0 4.97-3.38 9.61-7 10-3.62-.39-7-5.03-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -45,45 +44,38 @@
             <path d="M10.5 9V8a1.5 1.5 0 013 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         </symbol>
         
-        <!-- Boutiques -->
         <symbol id="i-bag" viewBox="0 0 24 24" fill="none">
             <path d="M6 7V6a6 6 0 1112 0v1" stroke="currentColor" stroke-width="1.8"/>
             <rect x="4" y="7" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/>
         </symbol>
         
-        <!-- Abarrotes -->
         <symbol id="i-store" viewBox="0 0 24 24" fill="none">
             <path d="M3 9l1.5-6h15L21 9v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.8"/>
             <path d="M3 9h18" stroke="currentColor" stroke-width="1.8"/>
             <path d="M9 13h6v8H9v-8z" stroke="currentColor" stroke-width="1.8"/>
         </symbol>
         
-        <!-- Prestamistas -->
         <symbol id="i-cash" viewBox="0 0 24 24" fill="none">
             <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
             <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
             <path d="M7 12h.01M17 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         </symbol>
         
-        <!-- Floristerías -->
         <symbol id="i-flower" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
             <path d="M12 4a3 3 0 010 6 3 3 0 010-6zm0 10a3 3 0 010 6 3 3 0 010-6zm8-2a3 3 0 01-6 0 3 3 0 016 0zm-10 0a3 3 0 01-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="1.8"/>
         </symbol>
         
-        <!-- Repostería -->
         <symbol id="i-cake" viewBox="0 0 24 24" fill="none">
             <path d="M12 3v3m-7 6h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z" stroke="currentColor" stroke-width="1.8"/>
             <path d="M5 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         </symbol>
         
-        <!-- Microemprendimientos -->
         <symbol id="i-lightbulb" viewBox="0 0 24 24" fill="none">
             <path d="M9 18h6m-5 2h4m-2-17a7 7 0 00-4 12v1h8v-1a7 7 0 00-4-12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
     </svg>
 
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
@@ -97,6 +89,7 @@
             
             <div class="nav-menu">
                 <div class="nav-links">
+                    <a href="#como-usar" class="nav-link">Cómo usar</a>
                     <a href="#caracteristicas" class="nav-link">Características</a>
                     <a href="#planes" class="nav-link">Planes</a>
                     <a href="#contacto" class="nav-link">Soporte</a>
@@ -107,7 +100,6 @@
                 </div>
             </div>
             
-            <!-- Menú hamburguesa para móvil -->
             <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
@@ -115,10 +107,10 @@
             </button>
         </nav>
         
-        <!-- Menú móvil -->
         <div class="nav-mobile" aria-hidden="true">
             <div class="nav-mobile-content">
                 <div class="nav-mobile-links">
+                    <a href="#como-usar" class="nav-mobile-link">Cómo usar</a>
                     <a href="#caracteristicas" class="nav-mobile-link">Características</a>
                     <a href="#planes" class="nav-mobile-link">Planes</a>
                     <a href="#contacto" class="nav-mobile-link">Soporte</a>
@@ -131,11 +123,9 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-layout">
-                <!-- Logo grande del lado izquierdo -->
                 <div class="hero-logo">
                     <div class="hero-logo-container">
                         <img src="assets/logo.png" alt="Gesty - Gestión Financiera" class="hero-logo-img">
@@ -143,7 +133,6 @@
                     </div>
                 </div>
                 
-                <!-- Contenido del lado derecho -->
                 <div class="hero-content">
                     <h1 class="hero-title">
                         La forma <span class="highlight">profesional</span> de gestionar clientes, deudas y pedidos
@@ -164,13 +153,86 @@
         </div>
     </section>
 
-    <!-- Características -->
+    <section id="como-usar" class="how-to-use">
+        <div class="container">
+            <h2 class="section-title">Cómo usar Gesty en 3 pasos</h2>
+            <p class="section-subtitle">Aprende el flujo principal para gestionar clientes, productos y movimientos.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Crear un Cliente 🤝</h3>
+                    </div>
+                    <p class="step-description">Registra a las personas o empresas con las que trabajas.</p>
+                    <div class="step-actions">
+                        <div class="action-item">
+                            <span class="action-icon">👉</span>
+                            <p>Presiona el botón **`+`** en la pantalla principal.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">✍️</span>
+                            <p>Llena el campo de **Nombre** y otros datos opcionales.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">✅</span>
+                            <p>Presiona **`Guardar`**. El cliente aparecerá en tu lista.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Agregar un Producto 📦</h3>
+                    </div>
+                    <p class="step-description">Define los artículos o servicios que vendes o prestas.</p>
+                    <div class="step-actions">
+                        <div class="action-item">
+                            <span class="action-icon">👆</span>
+                            <p>Toca el cliente al que quieres agregarle un producto.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">👉</span>
+                            <p>En la siguiente pantalla, presiona **`Agregar Producto`**.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">✅</span>
+                            <p>Presiona **`Guardar`**. El producto estará listo para ese cliente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Crear un Movimiento 💰</h3>
+                    </div>
+                    <p class="step-description">Registra cobros, pagos o deudas para mantener tu saldo actualizado.</p>
+                    <div class="step-actions">
+                        <div class="action-item">
+                            <span class="action-icon">👆</span>
+                            <p>Selecciona el cliente y el producto para el movimiento.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">👉</span>
+                            <p>Presiona el botón **`Nuevo Movimiento`**.</p>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">✅</span>
+                            <p>Ingresa el monto, elige el tipo y presiona **`Guardar`**.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="caracteristicas" class="features">
         <div class="container">
             <h2 class="section-title">Todo lo que necesitas en una sola app</h2>
             
             <div class="features-grid">
-                <!-- Seguridad y acceso -->
                 <div class="feature-card fc--seguridad">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-shield-check"/></svg>
@@ -179,7 +241,6 @@
                     <p>Inicio con Google, verificación de dispositivos, códigos de recuperación únicos y sincronización cifrada en la nube.</p>
                 </div>
 
-                <!-- Gestión de clientes -->
                 <div class="feature-card fc--clientes">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-users"/></svg>
@@ -189,7 +250,6 @@
                     <button class="btn-inline">Agregar cliente</button>
                 </div>
 
-                <!-- Resumen financiero -->
                 <div class="feature-card fc--resumen">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-chart"/></svg>
@@ -199,7 +259,6 @@
                     <button class="btn-inline">Generar reporte PDF</button>
                 </div>
 
-                <!-- Control de pedidos -->
                 <div class="feature-card fc--pedidos">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-clipboard"/></svg>
@@ -209,7 +268,6 @@
                     <button class="btn-inline">Nuevo pedido</button>
                 </div>
 
-                <!-- Sincronización inteligente -->
                 <div class="feature-card fc--sync">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-cloud-sync"/></svg>
@@ -218,7 +276,6 @@
                     <p>Trabajo offline, respaldo continuo, detección de conflictos y recuperación ante pérdida de datos.</p>
                 </div>
 
-                <!-- Centro de Control Premium -->
                 <div class="feature-card fc--premium">
                     <div class="feature-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-lock-monitor"/></svg>
@@ -231,14 +288,12 @@
         </div>
     </section>
 
-    <!-- Casos de Uso -->
     <section class="use-cases">
         <div class="container">
             <h2 class="section-title">Perfecto para tu tipo de negocio</h2>
             <p class="section-subtitle">Gesty se adapta a las necesidades específicas de diferentes industrias y modelos de negocio</p>
             
             <div class="use-cases-grid">
-                <!-- Boutiques y Tiendas de Ropa -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-bag"/></svg>
@@ -256,7 +311,6 @@
                     </div>
                 </div>
 
-                <!-- Tiendas de Abarrotes -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-store"/></svg>
@@ -274,7 +328,6 @@
                     </div>
                 </div>
 
-                <!-- Prestamistas -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-cash"/></svg>
@@ -292,7 +345,6 @@
                     </div>
                 </div>
 
-                <!-- Floristerías -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-flower"/></svg>
@@ -310,7 +362,6 @@
                     </div>
                 </div>
 
-                <!-- Repostería y Pasteles -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-cake"/></svg>
@@ -324,11 +375,10 @@
                         <li>Galería de trabajos realizados</li>
                     </ul>
                     <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Pastel de chocolate para 20 personas, entrega sábado, anticipo $300.
+                        <strong>Ejemplo:</strong> Pastel de chocolate para 20 personas, entrega sábado, total $240.
                     </div>
                 </div>
 
-                <!-- Microemprendimientos -->
                 <div class="use-case-card">
                     <div class="use-case-icon" aria-hidden="true">
                         <svg class="icon"><use href="#i-lightbulb"/></svg>
@@ -355,13 +405,11 @@
         </div>
     </section>
 
-    <!-- Planes -->
     <section id="planes" class="pricing">
         <div class="container">
             <h2 class="section-title">Elige el plan perfecto para tu negocio</h2>
             
             <div class="pricing-grid">
-                <!-- Plan Gratis -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Gratis</h3>
@@ -380,7 +428,6 @@
                     <button class="btn btn-outline">Empezar gratis</button>
                 </div>
 
-                <!-- Plan Nube -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Nube</h3>
@@ -399,7 +446,6 @@
                     <button class="btn btn-primary">Elegir Nube</button>
                 </div>
 
-                <!-- Plan Premium -->
                 <div class="pricing-card featured">
                     <div class="pricing-badge">Más popular</div>
                     <div class="pricing-header">
@@ -423,7 +469,6 @@
         </div>
     </section>
 
-    <!-- CTA Final -->
     <section class="final-cta">
         <div class="container">
             <div class="cta-content">
@@ -437,7 +482,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
