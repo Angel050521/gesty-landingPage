@@ -1,5 +1,9 @@
-/* Reset y variables */
-* {
+/* ============================================= */
+/* RESET Y VARIABLES GLOBALES           */
+/* ============================================= */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,12 +23,7 @@
     --text-secondary: #B8BCC8;
     --text-muted: #8B92A5;
     --success: #33C758;
-
-    /* Iconografía unificada Gesty */
-    --icon-size: 28px;
-    --icon-stroke: 1.8;
-    --neon: 0 0 10px rgba(0, 191, 255, 0.35), 0 0 20px rgba(0, 191, 255, 0.2);
-    --neon-strong: 0 0 14px rgba(0, 191, 255, 0.55), 0 0 28px rgba(0, 191, 255, 0.35);
+    --premium: #FACC15; /* Amarillo para premium */
 
     /* Tipografía */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -34,14 +33,14 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    /* Espaciado */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-2xl: 4rem;
-    --spacing-3xl: 6rem;
+    /* Espaciado (Layout) */
+    --spacing-xs: 0.5rem;  /* 8px */
+    --spacing-sm: 1rem;    /* 16px */
+    --spacing-md: 1.5rem;  /* 24px */
+    --spacing-lg: 2rem;    /* 32px */
+    --spacing-xl: 3rem;    /* 48px */
+    --spacing-2xl: 4rem;   /* 64px */
+    --spacing-3xl: 6rem;   /* 96px */
 
     /* Bordes */
     --border-radius: 8px;
@@ -52,18 +51,37 @@
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --neon: 0 0 10px rgba(0, 191, 255, 0.35), 0 0 20px rgba(0, 191, 255, 0.2);
+    --neon-strong: 0 0 14px rgba(0, 191, 255, 0.55), 0 0 28px rgba(0, 191, 255, 0.35);
 
     /* Transiciones */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Layout */
+    --header-height: 70px;
 }
 
-/* Base */
+/* ============================================= */
+/* ESTILOS BASE                  */
+/* ============================================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-family);
     background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-darker) 100%);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Clase para evitar el scroll del body cuando el menú móvil está abierto */
+.no-scroll {
+    overflow: hidden;
 }
 
 .container {
@@ -72,37 +90,47 @@ body {
     padding: 0 var(--spacing-md);
 }
 
-/* Header */
+/* Mejoras de accesibilidad para navegación con teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ============================================= */
+/* HEADER                      */
+/* ============================================= */
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    background: rgba(27, 30, 47, 0.95);
+    width: 100%;
+    background: rgba(27, 30, 47, 0.85); /* Ligero ajuste para mejor efecto */
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    transition: var(--transition);
+    transition: var(--transition-normal);
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
+    height: var(--header-height);
+    padding: 0 var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
-/* Logo y marca */
 .logo-link {
     text-decoration: none;
-    transition: var(--transition);
+    transition: var(--transition-fast);
+    display: inline-flex; /* Para que el focus-visible se ajuste bien */
 }
 
 .logo-link:hover {
-    transform: translateY(-1px);
+    transform: scale(1.05);
 }
 
 .logo {
@@ -115,14 +143,13 @@ body {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
-    transition: var(--transition);
+    transition: var(--transition-fast);
 }
 
 .logo-link:hover .brand-name {
     color: var(--primary);
 }
 
-/* Menú de navegación */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -132,7 +159,6 @@ body {
 .nav-links {
     display: flex;
     gap: var(--spacing-lg);
-    align-items: center;
 }
 
 .nav-actions {
@@ -146,7 +172,7 @@ body {
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     font-size: 0.95rem;
-    transition: var(--transition);
+    transition: var(--transition-fast);
     position: relative;
     padding: var(--spacing-xs) 0;
 }
@@ -159,11 +185,12 @@ body {
     content: '';
     position: absolute;
     bottom: -2px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--primary), var(--accent-light));
-    transition: var(--transition);
+    transition: var(--transition-normal);
     border-radius: 1px;
 }
 
@@ -171,54 +198,26 @@ body {
     width: 100%;
 }
 
-.nav-link--secondary {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-.nav-link--secondary:hover {
-    color: var(--text-secondary);
-}
-
-/* Botón CTA en navegación */
-.btn-nav {
-    padding: var(--spacing-xs) var(--spacing-md);
-    font-size: 0.9rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 191, 255, 0.2);
-}
-
-.btn-nav:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
-}
-
-/* Menú hamburguesa */
 .nav-toggle {
-    display: none;
+    display: none; /* Oculto por defecto, visible en móvil */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 32px;
     height: 32px;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
-    transition: var(--transition);
-}
-
-.nav-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
+    padding: 0;
+    z-index: 1001; /* Encima del header y menú móvil */
 }
 
 .nav-toggle-line {
     width: 20px;
     height: 2px;
     background: var(--text-primary);
-    margin: 2px 0;
-    transition: var(--transition);
+    margin: 3px 0;
+    transition: transform 0.3s ease-out, opacity 0.2s ease-out;
     border-radius: 1px;
 }
 
@@ -231,61 +230,51 @@ body {
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(4px, -4px);
 }
 
-/* Menú móvil */
 .nav-mobile {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    height: 100dvh; /* Usa unidades dinámicas de viewport */
     background: var(--bg-main);
-    padding-top: 70px;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0% at 100% 0); /* Animación más fluida */
+    transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 999;
 }
 
 .nav-mobile[aria-hidden="false"] {
-    transform: translateX(0);
-}
-
-.nav-mobile-content {
-    display: flex;
-    flex-direction: column;
-    padding: var(--spacing-lg);
-    gap: var(--spacing-xl);
+    clip-path: circle(150% at 100% 0);
 }
 
 .nav-mobile-links {
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: var(--spacing-lg);
 }
 
 .nav-mobile-link {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     text-decoration: none;
-    padding: var(--spacing-xs) 0;
-    transition: var(--transition);
+    transition: var(--transition-fast);
 }
 
 .nav-mobile-link:hover {
     color: var(--primary);
 }
 
-.nav-mobile-actions {
-    margin-top: var(--spacing-md);
-}
-
-.btn-mobile {
-    width: 100%;
-    font-size: 1.1rem;
-}
+/* ============================================= */
+/* COMPONENTES                   */
+/* ============================================= */
 
 /* Secciones generales */
 section {
@@ -293,7 +282,8 @@ section {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    /* Tipografía fluida: se adapta al tamaño de la pantalla */
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: var(--font-weight-bold);
     text-align: center;
     margin-bottom: var(--spacing-sm);
@@ -302,7 +292,7 @@ section {
 }
 
 .section-subtitle {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-secondary);
     text-align: center;
     max-width: 800px;
@@ -317,68 +307,44 @@ section {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    border: none;
+    border: 1px solid transparent;
     font-size: 1rem;
-    transition: var(--transition);
+    text-align: center;
+    transition: var(--transition-fast);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 .btn-primary {
     background: linear-gradient(45deg, var(--primary), var(--accent-light));
     color: var(--bg-main);
     box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
-    border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 191, 255, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .btn-inline {
-    background: none;
-    border: none;
     color: var(--primary);
-    font-size: 0.95rem;
-    font-weight: var(--font-weight-medium);
-    padding: 0;
-    cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 4px;
-    transition: color 0.2s ease;
-    margin-top: var(--spacing-md);
 }
-
-.btn-inline:hover {
-    color: var(--accent-light);
-}
-
 .btn-inline.premium {
-    color: #FACC15; /* Amarillo para premium */
-    text-decoration-color: #FACC15;
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    box-shadow: none;
-}
-
-.btn-outline:hover {
-    background: rgba(0, 191, 255, 0.1);
-    transform: translateY(-2px);
+    color: var(--premium);
 }
 
 .btn.large {
@@ -388,11 +354,11 @@ section {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 100dvh; /* Altura dinámica del viewport */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: var(--header-height);
     position: relative;
     overflow: hidden;
 }
@@ -401,21 +367,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-lg);
     text-align: center;
 }
 
-.hero-logo-container {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .hero-logo-img {
-    width: 100%;
+    width: 180px;
     height: auto;
     animation: bounce 3s ease-in-out infinite;
 }
@@ -425,22 +382,8 @@ section {
     50% { transform: translateY(-10px); }
 }
 
-.hero-logo-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: var(--primary);
-    opacity: 0.2;
-    filter: blur(50px);
-    z-index: -1;
-}
-
 .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 6vw, 3.5rem); /* Tipografía fluida */
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
     letter-spacing: -0.05em;
@@ -450,12 +393,13 @@ section {
 .hero-title .highlight {
     background: linear-gradient(90deg, var(--primary), var(--accent-light));
     -webkit-background-clip: text;
+    background-clip: text; /* Prefijo estándar */
+    color: transparent; /* color reemplaza -webkit-text-fill-color */
     -webkit-text-fill-color: transparent;
-    display: inline-block;
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--text-secondary);
     max-width: 600px;
     margin-bottom: var(--spacing-lg);
@@ -463,35 +407,16 @@ section {
 
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap; /* Para que no se desborden en pantallas pequeñas */
     gap: var(--spacing-md);
     justify-content: center;
 }
 
-.hero-microcopy {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: var(--spacing-sm);
-}
-
-/* INICIO ESTILOS SECCIÓN "CÓMO USAR" */
+/* Estilos de la sección "Cómo usar" */
 .how-to-use {
     background: var(--bg-secondary);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.steps-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.step-card-container {
-    display: flex;
-    position: relative;
 }
 
 .step-card {
@@ -500,13 +425,13 @@ section {
     border-radius: var(--border-radius-xl);
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    width: 100%;
+    transition: var(--transition-normal);
 }
 
 .step-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 191, 255, 0.3);
 }
 
 .step-header {
@@ -538,3 +463,42 @@ section {
 .step-content p {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
+}
+
+/* ============================================= */
+/* MEDIA QUERIES                 */
+/* ============================================= */
+
+/* Estilos para tabletas */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    /* Ocultar menú de escritorio y mostrar el de hamburguesa */
+    .nav-menu {
+        display: none;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Ajustes generales de espaciado */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    /* Hero Section en móvil */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .btn {
+        width: 100%; /* Botones de ancho completo en móvil */
+    }
+}
