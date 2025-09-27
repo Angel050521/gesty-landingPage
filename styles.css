@@ -620,6 +620,7 @@ section {
     line-height: 1.1;
     letter-spacing: -0.05em;
     margin-bottom: var(--spacing-sm);
+    text-align: center;
 }
 
 .hero-title .highlight {
@@ -646,6 +647,7 @@ section {
 /* Efecto parallax especial para el texto del hero */
 .hero-content {
     transition: transform 0.3s ease-out;
+    text-align: center;
 }
 
 .hero-title,
@@ -697,6 +699,112 @@ section {
     font-weight: var(--font-weight-bold);
 }
 
+/* ===== ÍNDICE DE NAVEGACIÓN ===== */
+.index-nav {
+    background: var(--bg-main);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.index-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 191, 255, 0.03) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.index-nav .container {
+    position: relative;
+    z-index: 1;
+}
+
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.index-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-light));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.index-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(0, 191, 255, 0.3);
+}
+
+.index-card:hover::before {
+    transform: scaleX(1);
+}
+
+.index-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    transition: var(--transition);
+}
+
+.index-card:hover .index-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.index-card h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.index-card:hover h3 {
+    color: var(--primary);
+}
+
+.index-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    transition: var(--transition);
+}
+
+.index-card:hover p {
+    color: var(--text-primary);
+}
+
 /* ===== SECCIÓN "CÓMO USAR" ===== */
 .how-to-use {
     background: var(--bg-secondary);
@@ -719,6 +827,42 @@ section {
 .how-to-use .container {
     position: relative;
     z-index: 1;
+}
+
+/* Separadores de sección */
+.how-to-use .section-divider {
+    display: flex !important;
+    align-items: center !important;
+    margin: var(--spacing-2xl) 0 !important;
+    gap: var(--spacing-md) !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.how-to-use .divider-line {
+    flex: 1 !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%) !important;
+    border-radius: 1px !important;
+    min-width: 50px !important;
+}
+
+.how-to-use .divider-text {
+    font-size: 0.875rem !important;
+    font-weight: var(--font-weight-semibold) !important;
+    color: var(--primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    background: var(--bg-card) !important;
+    border: 1px solid rgba(0, 191, 255, 0.2) !important;
+    border-radius: var(--border-radius) !important;
+    white-space: nowrap !important;
+    box-shadow: var(--neon) !important;
+    font-family: var(--font-family) !important;
+    line-height: 1.2 !important;
 }
 
 .steps-timeline {
@@ -1474,6 +1618,19 @@ section {
     font-weight: var(--font-weight-bold);
 }
 
+.plan-info {
+    display: block;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(0, 191, 255, 0.1);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--spacing-md);
+}
+
 /* ===== SECCIÓN CTA FINAL ===== */
 .final-cta {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent-light) 100%);
@@ -1668,6 +1825,22 @@ section {
         width: 100%;
         max-width: 300px;
     }
+    
+    .index-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .index-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .index-icon {
+        font-size: 2.5rem;
+    }
+    
+    .index-card h3 {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1743,6 +1916,10 @@ section {
         font-size: 1.3rem;
     }
     
+    .index-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .steps-timeline::before {
         left: 20px;
     }
@@ -1790,7 +1967,8 @@ section {
 .step-card,
 .feature-card,
 .use-case-card,
-.pricing-card {
+.pricing-card,
+.index-card {
     animation: fadeInUp 0.6s ease-out;
 }
 
@@ -1805,6 +1983,23 @@ section {
 
 .step-card-container:nth-child(3) {
     animation-delay: 0.5s;
+}
+
+/* Animaciones escalonadas para el índice */
+.index-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.index-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.index-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.index-card:nth-child(4) {
+    animation-delay: 0.7s;
 }
 
 /* Animación especial para los elementos de lista */
