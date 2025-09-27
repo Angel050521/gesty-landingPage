@@ -29,6 +29,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        /* Separadores de sección */
+        .how-to-use .section-divider {
+            display: flex !important;
+            align-items: center !important;
+            margin: 3rem 0 !important;
+            gap: 1.5rem !important;
+            width: 100% !important;
+            max-width: 800px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .how-to-use .divider-line {
+            flex: 1 !important;
+            height: 2px !important;
+            background: linear-gradient(90deg, transparent 0%, #00BFFF 50%, transparent 100%) !important;
+            border-radius: 1px !important;
+            min-width: 50px !important;
+        }
+
+        .how-to-use .divider-text {
+            font-size: 0.875rem !important;
+            font-weight: 600 !important;
+            color: #00BFFF !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+            padding: 0.5rem 1rem !important;
+            background: #2A2F42 !important;
+            border: 1px solid rgba(0, 191, 255, 0.2) !important;
+            border-radius: 8px !important;
+            white-space: nowrap !important;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.35), 0 0 20px rgba(0, 191, 255, 0.2) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+            line-height: 1.2 !important;
+        }
+
+        /* Asegurar que todas las cards tengan el mismo tamaño */
+        .how-to-use .step-card {
+            width: 100% !important;
+            min-height: 300px !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .how-to-use .step-content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    </style>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -104,12 +156,7 @@
                     <li role="none"><a href="#como-usar" class="nav-link" role="menuitem">Cómo usar</a></li>
                     <li role="none"><a href="#caracteristicas" class="nav-link" role="menuitem">Características</a></li>
                     <li role="none"><a href="#planes" class="nav-link" role="menuitem">Planes</a></li>
-                    <li role="none"><a href="#contacto" class="nav-link" role="menuitem">Soporte</a></li>
                 </ul>
-                <div class="nav-actions">
-                    <a href="#login" class="nav-link nav-link--secondary" aria-label="Iniciar sesión">Iniciar sesión</a>
-                    <a href="#trial" class="btn btn-primary btn-nav" aria-label="Probar Gesty gratis">Probar gratis</a>
-                </div>
             </div>
             
             <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu" aria-haspopup="true">
@@ -125,12 +172,7 @@
                     <li role="none"><a href="#como-usar" class="nav-mobile-link" role="menuitem">Cómo usar</a></li>
                     <li role="none"><a href="#caracteristicas" class="nav-mobile-link" role="menuitem">Características</a></li>
                     <li role="none"><a href="#planes" class="nav-mobile-link" role="menuitem">Planes</a></li>
-                    <li role="none"><a href="#contacto" class="nav-mobile-link" role="menuitem">Soporte</a></li>
-                    <li role="none"><a href="#login" class="nav-mobile-link" role="menuitem">Iniciar sesión</a></li>
                 </ul>
-                <div class="nav-mobile-actions">
-                    <a href="#trial" class="btn btn-primary btn-mobile" aria-label="Probar Gesty gratis">Probar gratis</a>
-                </div>
             </div>
         </div>
     </header>
@@ -160,10 +202,46 @@
                             Todo lo que necesitas para llevar el control financiero de tu empresa.
                         </p>
                         <div class="hero-buttons">
-                            <a href="#trial" class="btn btn-primary" role="button" aria-label="Probar Gesty gratis ahora">Probar gratis</a>
-                            <a href="#planes" class="btn btn-secondary" role="button" aria-label="Ver planes y precios">Ver planes</a>
+                            <a href="#planes" class="btn btn-primary" role="button" aria-label="Ver información de planes">Ver información</a>
+                            <a href="#caracteristicas" class="btn btn-secondary" role="button" aria-label="Ver características">Ver características</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Índice de navegación -->
+        <section class="index-nav" aria-labelledby="index-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title" id="index-title">Navega por Gesty</h2>
+                    <p class="section-subtitle">Explora todas las funcionalidades y características de Gesty</p>
+                </header>
+                
+                <div class="index-grid">
+                    <a href="#como-usar" class="index-card">
+                        <div class="index-icon">📚</div>
+                        <h3>Cómo usar</h3>
+                        <p>Aprende a usar Gesty paso a paso</p>
+                    </a>
+                    
+                    <a href="#caracteristicas" class="index-card">
+                        <div class="index-icon">⚡</div>
+                        <h3>Características</h3>
+                        <p>Descubre todas las funciones disponibles</p>
+                    </a>
+                    
+                    <a href="#planes" class="index-card">
+                        <div class="index-icon">💎</div>
+                        <h3>Planes</h3>
+                        <p>Elige el plan perfecto para tu negocio</p>
+                    </a>
+                    
+                    <a href="#casos-uso" class="index-card">
+                        <div class="index-icon">🏢</div>
+                        <h3>Casos de uso</h3>
+                        <p>Perfecto para tu tipo de negocio</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -172,8 +250,15 @@
             <div class="container">
                 <header class="section-header">
                     <h2 class="section-title" id="how-to-use-title">Domina Gesty en Minutos</h2>
-                    <p class="section-subtitle">Sigue estos sencillos pasos para registrar tu primer cliente y su primer movimiento.</p>
+                    <p class="section-subtitle">Sigue esta guía sencilla para aprender a usar Gesty en minutos.</p>
                 </header>
+                
+                <!-- Separador para pantalla de clientes -->
+                <div class="section-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Pantalla de Clientes</div>
+                    <div class="divider-line"></div>
+                </div>
                 
                 <div class="steps-timeline" role="list" aria-label="Pasos para usar Gesty">
                     <article class="step-card-container" role="listitem">
@@ -208,7 +293,7 @@
                                     </li>
                                 </ol>
                                 <div class="step-tip" role="note">
-                                    <strong>Tip:</strong> El plan gratuito te permite guardar clientes de forma local. ¡Con Premium se gaurdan en la nube para que nunca se pierdan!
+                                    <strong>Nota:</strong> Si dejas presionado sobre un cliente en la lista, podrás editarlo o eliminarlo.
                                 </div>
                             </div>
                         </div>
@@ -241,10 +326,13 @@
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">📝</span>
                                         <div class="step-list-content">
-                                            <strong>Llena los datos:</strong> Nombre, descripción y precio del producto o servicio.
+                                            <strong>Llena los datos:</strong> Nombre, descripción y precio inicial del producto o servicio.
                                         </div>
                                     </li>
                                 </ol>
+                            </div>
+                            <div class="step-tip" role="note">
+                                <strong>Tip:</strong> Esto es muy utial para cualquier negocio que venda varios productos o servicios a un mismo cliente, despues de esto solo tienes que agregar los abonos o pagos del cliente.
                             </div>
                         </div>
                     </article>
@@ -259,30 +347,129 @@
                                 </h3>
                             </header>
                             <div class="step-content">
-                                <p>Con un producto ya creado, puedes empezar a registrar cargos, pagos o ajustes.</p>
+                                <p>Con un cliente y/o un producto ya creado a un cliente, puedes empezar a registrar cargos y pagos.</p>
                                 <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📊</span>
-                                        <div class="step-list-content">
-                                            En la pantalla del cliente, ve a <strong>"Movimientos"</strong>.
-                                        </div>
-                                    </li>
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">🛒</span>
                                         <div class="step-list-content">
-                                            Elige el producto al que le agregarás el movimiento.
+                                            En la pantalla clientes, toca el campo "Selecciona un producto" y elige el producto al que le agregarás el movimiento.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">📊</span>
+                                        <div class="step-list-content">
+                                            Presiona el botón <strong>"Agregar Movimiento"</strong>.
                                         </div>
                                     </li>
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">💵</span>
                                         <div class="step-list-content">
-                                            Presiona <strong>"Agregar Movimiento"</strong> e ingresa el monto, tipo (cargo, pago) y una descripción.
+                                            Ingresa el monto, selecciona si es un cargo o un pago y, si lo deseas, añade una descripción (puedes dejarla vacía). El sistema agregará automáticamente las comas separadoras al monto para facilitar la lectura.
+                                        </div>
                                         </div>
                                     </li>
                                 </ol>
+                                <div class="step-tip" role="note">
+                                    Nota 1: Por defecto, muchas veces estará seleccionado el producto "cuenta principal" que se crea automáticamente al crear un cliente.
+                                </div>
+                                <div class="step-tip" role="note">
+                                    Nota 2: puedes tocar cualquier movimeinto para editarlo, puedes cambiar el monto, tipo de movimieto o descripción
+                                </div>
                             </div>
                         </div>
                     </article>
+                </div>
+                
+                <!-- Separador para funciones extras -->
+                <div class="section-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Funciones Extras</div>
+                    <div class="divider-line"></div>
+                </div>
+                
+                <div class="steps-timeline" role="list" aria-label="Funciones extras de Gesty">
+                    <article class="step-card-container" role="listitem">
+                        <div class="step-card">
+                            <header class="step-header">
+                                <span class="step-number" aria-label="Función 1">📄</span>
+                                <h3 class="step-title">
+                                    Generar PDF
+                                </h3>
+                            </header>
+                            <div class="step-content">
+                                <p>Genera reportes profesionales en PDF con toda la información del cliente.</p>
+                                <ol class="step-list">
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">📱</span>
+                                        <div class="step-list-content">
+                                            <strong>Generar PDF:</strong> En la pantalla de clientes, presiona el botón <strong>"📄 PDF"</strong> para generar un reporte completo del cliente con todos sus movimientos.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">📤</span>
+                                        <div class="step-list-content">
+                                            <strong>Compartir PDF:</strong> El PDF se generará automáticamente y podrás compartirlo por WhatsApp, correo electrónico o guardarlo en tu dispositivo.
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="step-tip" role="note">
+                                    <strong>Tip:</strong> Los PDFs incluyen toda la información del cliente: datos personales, productos, movimientos y saldos pendientes.
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="step-card-container" role="listitem">
+                        <div class="step-card">
+                            <header class="step-header">
+                                <span class="step-number" aria-label="Función 2">💰</span>
+                                <h3 class="step-title">
+                                    <span class="step-icon" aria-hidden="true">💰</span>
+                                    Abono Global
+                                </h3>
+                            </header>
+                            <div class="step-content">
+                                <p>Realiza pagos que se distribuyan automáticamente entre todos los productos del cliente.</p>
+                                <ol class="step-list">
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">👆</span>
+                                        <div class="step-list-content">
+                                            <strong>Acceder:</strong> Presiona el botón en forma de cartera que está arriba a la derecha en cualquier cliente.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">💰</span>
+                                        <div class="step-list-content">
+                                         Presiona el botón "Abono Global".
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="step-list-icon" aria-hidden="true">💵</span>
+                                        <div class="step-list-content">
+                                            <strong>Ingresar monto:</strong> Escribe el monto total que el cliente va a pagar y el sistema distribuye automáticamente el pago entre todos los productos con saldo pendiente.
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="step-tip" role="note">
+                                    <strong>Tip:</strong> El abono global distribuye el pago proporcionalmente entre todos los productos con saldo pendiente del cliente, ahorrándote tiempo en cálculos manuales.
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Separador para pantalla de resumen -->
+                <div class="section-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Pantalla de Resumen</div>
+                    <div class="divider-line"></div>
+                </div>
+                
+                <!-- Separador para pantalla de pedidos -->
+                <div class="section-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Pantalla de Pedidos</div>
+                    <div class="divider-line"></div>
                 </div>
             </div>
         </section>
@@ -313,7 +500,6 @@
                         </div>
                         <h3>Gestión de clientes</h3>
                         <p>Alta rápida, búsqueda inteligente, historial completo de movimientos y exportación a PDF con envío por WhatsApp.</p>
-                        <button class="btn-inline" aria-label="Agregar nuevo cliente">Agregar cliente</button>
                     </article>
 
                     <article class="feature-card fc--resumen" role="listitem">
@@ -322,7 +508,6 @@
                         </div>
                         <h3>Resumen financiero</h3>
                         <p>Cuatro pestañas con métricas completas: general, clientes, pedidos y finanzas. Filtros temporales y reportes PDF.</p>
-                        <button class="btn-inline" aria-label="Generar reporte PDF">Generar reporte PDF</button>
                     </article>
 
                     <article class="feature-card fc--pedidos" role="listitem">
@@ -331,7 +516,6 @@
                         </div>
                         <h3>Control de pedidos</h3>
                         <p>Estados automáticos, alta rápida con todos los datos, orden cronológico y registro de gastos por pedido.</p>
-                        <button class="btn-inline" aria-label="Crear nuevo pedido">Nuevo pedido</button>
                     </article>
 
                     <article class="feature-card fc--sync" role="listitem">
@@ -348,21 +532,22 @@
                         </div>
                         <h3>Centro de Control Premium</h3>
                         <p>Gestión de sesiones activas, dispositivo principal, cierre remoto y monitoreo de accesos.</p>
-                        <button class="btn-inline premium" aria-label="Activar plan Premium">Activar Premium</button>
                     </article>
                 </div>
         </div>
     </section>
 
-    <section class="use-cases">
+    <section id="casos-uso" class="use-cases">
         <!-- Elementos parallax de casos de uso -->
         <div class="use-cases-bg-element" aria-hidden="true"></div>
         <div class="use-cases-bg-element" aria-hidden="true"></div>
         <div class="use-cases-bg-element" aria-hidden="true"></div>
         
         <div class="container">
-            <h2 class="section-title">Perfecto para tu tipo de negocio</h2>
-            <p class="section-subtitle">Gesty se adapta a las necesidades específicas de diferentes industrias y modelos de negocio</p>
+            <header class="section-header">
+                <h2 class="section-title">Perfecto para tu tipo de negocio</h2>
+                <p class="section-subtitle">Gesty se adapta a las necesidades específicas de diferentes industrias y modelos de negocio</p>
+            </header>
             
             <div class="use-cases-grid">
                 <div class="use-case-card">
@@ -471,7 +656,6 @@
             <div class="use-cases-cta">
                 <h3>¿Tu negocio es diferente?</h3>
                 <p>Gesty se adapta a cualquier modelo de negocio que maneje clientes, deudas o pedidos</p>
-                <button class="btn btn-primary">Probar con mi negocio</button>
             </div>
         </div>
     </section>
@@ -494,14 +678,10 @@
                     </div>
                     <div class="pricing-features">
                         <ul>
-                            <li>Todas las funciones básicas</li>
-                            <li>Guardado local</li>
-                            <li>Gestión de clientes</li>
-                            <li>Control de pedidos</li>
-                            <li>Reportes básicos</li>
+                            <li>Todas las funciones disponibles pero con guardado local</li>
                         </ul>
                     </div>
-                    <button class="btn btn-outline">Empezar gratis</button>
+                    <span class="plan-info">Plan gratuito disponible</span>
                 </div>
 
                 <div class="pricing-card">
@@ -519,7 +699,7 @@
                             <li>Soporte prioritario</li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary">Elegir Nube</button>
+                    <span class="plan-info">Plan con sincronización en la nube</span>
                 </div>
 
                 <div class="pricing-card featured">
@@ -539,7 +719,7 @@
                             <li>Soporte premium 24/7</li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary">Elegir Premium</button>
+                    <span class="plan-info">Plan con funciones avanzadas</span>
                 </div>
             </div>
         </div>
@@ -548,11 +728,11 @@
     <section class="final-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Empieza hoy con Gesty</h2>
-                <p>Descárgala, crea tu cuenta gratuita y organiza tu negocio de forma profesional</p>
+                <h2>Conoce más sobre Gesty</h2>
+                <p>Descubre todas las funciones disponibles para organizar tu negocio de forma profesional</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary large">Probar gratis</button>
-                    <button class="btn btn-secondary large">Ver funciones</button>
+                    <a href="#caracteristicas" class="btn btn-primary large">Ver características</a>
+                    <a href="#planes" class="btn btn-secondary large">Ver planes</a>
                 </div>
             </div>
         </div>
@@ -581,11 +761,11 @@
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Soporte</h4>
+                        <h4>Información</h4>
                         <ul>
-                            <li><a href="#help" aria-label="Centro de ayuda">Centro de ayuda</a></li>
-                            <li><a href="#contact" aria-label="Contactar soporte">Contacto</a></li>
-                            <li><a href="#report" aria-label="Reportar problema">Reportar problema</a></li>
+                            <li><a href="#como-usar">Cómo usar</a></li>
+                            <li><a href="#caracteristicas">Características</a></li>
+                            <li><a href="#planes">Planes disponibles</a></li>
                         </ul>
                     </div>
                     
@@ -704,7 +884,7 @@
             }, observerOptions);
             
             // Observar elementos para animaciones
-            const animatedElements = document.querySelectorAll('.step-card, .feature-card, .use-case-card, .pricing-card');
+            const animatedElements = document.querySelectorAll('.step-card, .feature-card, .use-case-card, .pricing-card, .index-card');
             animatedElements.forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
