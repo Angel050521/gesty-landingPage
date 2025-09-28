@@ -1,7 +1,7 @@
 /* ===== RESET Y VARIABLES ===== */
 
 .svg-hidden {
-  display: none;
+    display: none;
 }
 
 *,
@@ -20,28 +20,28 @@
     --accent: #007AFF;
     --accent-light: #00D6FF;
     --accent-dark: #0056B3;
-    
+
     /* Colores de fondo */
     --bg-main: #1B1E2F;
     --bg-secondary: #252A3D;
     --bg-darker: #0F1419;
     --bg-card: #2A2F42;
     --bg-hover: #3A3F52;
-    
+
     /* Colores de texto */
     --text-primary: #FFFFFF;
     --text-secondary: #B8BCC8;
     --text-muted: #8B92A5;
     --text-accent: #00BFFF;
-    
+
     /* Colores de estado */
     --success: #33C758;
     --warning: #FF9500;
     --error: #FF3B30;
     --info: #007AFF;
-    
+
     /* Iconografía */
-    
+
     /* Efectos visuales */
     --primary: #00BFFF;
     --primary-dark: #0099CC;
@@ -115,19 +115,20 @@ body {
     padding: 0 var(--spacing-md);
     width: 100%;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 @media (max-width: 700px) {
-  .container,
-  .index-grid,
-  .features-grid,
-  .pricing-grid,
-  .use-cases-grid,
-  .steps-timeline {
-    max-width: 100vw;
-    overflow-x: auto;
-  }
+
+    .container,
+    .index-grid,
+    .features-grid,
+    .pricing-grid,
+    .use-cases-grid,
+    .steps-timeline {
+        max-width: 100vw;
+        overflow-x: auto;
+    }
 }
 
 /* Prevenir desbordamiento horizontal en todos los elementos */
@@ -383,7 +384,7 @@ img {
     font-weight: 700;
     font-size: 1.15rem;
     border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0,191,255,0.10);
+    box-shadow: 0 2px 8px rgba(0, 191, 255, 0.10);
     text-decoration: none;
     margin-bottom: 0.5rem;
     transition: background 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -568,7 +569,7 @@ section {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 30% 20%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 70% 80%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
     z-index: -1;
 }
 
@@ -606,31 +607,37 @@ section {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(180deg);
     }
 }
 
 /* Reduce animaciones y blur en móviles y usuarios que prefieren menos movimiento */
-@media (max-width: 600px), (prefers-reduced-motion: reduce) {
-  .hero-bg-element,
-  .features-bg-element,
-  .use-cases-bg-element,
-  .pricing-bg-element {
-    animation: none;
-    opacity: 0.03;
-  }
-  .header,
-  .hero,
-  .features,
-  .how-to-use,
-  .use-cases {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-  }
+@media (max-width: 600px),
+(prefers-reduced-motion: reduce) {
+
+    .hero-bg-element,
+    .features-bg-element,
+    .use-cases-bg-element,
+    .pricing-bg-element {
+        animation: none;
+        opacity: 0.03;
+    }
+
+    .header,
+    .hero,
+    .features,
+    .how-to-use,
+    .use-cases {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
 }
 
 
@@ -665,11 +672,14 @@ section {
 }
 
 @keyframes bounce {
-    0%, 100% { 
-        transform: translateY(0); 
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
-    50% { 
-        transform: translateY(-10px); 
+
+    50% {
+        transform: translateY(-10px);
     }
 }
 
@@ -689,10 +699,13 @@ section {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.2;
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         opacity: 0.4;
         transform: translate(-50%, -50%) scale(1.1);
@@ -745,13 +758,14 @@ section {
 }
 
 @media (max-width: 600px) {
-  .hero-title:hover,
-  .logo-link:hover .logo-img,
-  .index-card:hover,
-  .step-card:hover .step-number,
-  .index-card:hover .index-icon {
-    transform: scale(1.01);
-  }
+
+    .hero-title:hover,
+    .logo-link:hover .logo-img,
+    .index-card:hover,
+    .step-card:hover .step-number,
+    .index-card:hover .index-icon {
+        transform: scale(1.01);
+    }
 }
 
 .hero-description:hover {
@@ -759,8 +773,15 @@ section {
 }
 
 @keyframes underline {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .hero-description {
@@ -938,6 +959,7 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
 .divider-line {
     flex: 1;
     height: 2px;
@@ -971,6 +993,7 @@ section {
     display: flex;
     flex-direction: column;
 }
+
 .step-content {
     flex: 1;
     display: flex;
@@ -1326,7 +1349,7 @@ section {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 20% 50%, rgba(0, 191, 255, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(0, 122, 255, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 50%, rgba(0, 122, 255, 0.05) 0%, transparent 50%);
     z-index: 0;
 }
 
@@ -1367,15 +1390,17 @@ section {
 .features .container {
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-2xl);
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 .feature-card {
@@ -1386,6 +1411,10 @@ section {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform-origin: center center;
 }
 
 .feature-card::before {
@@ -1485,7 +1514,7 @@ section {
 
 .use-cases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-2xl);
 }
@@ -1662,6 +1691,7 @@ section {
 .pricing .container {
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .pricing-grid {
@@ -1669,9 +1699,11 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-2xl);
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .pricing-card {
@@ -1682,6 +1714,10 @@ section {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform-origin: center center;
 }
 
 .pricing-card:hover {
@@ -1693,11 +1729,10 @@ section {
 .pricing-card.featured {
     border-color: var(--primary);
     box-shadow: var(--neon);
-    transform: scale(1.05);
 }
 
 .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .pricing-badge {
@@ -1859,10 +1894,10 @@ section {
     outline: none;
     position: relative;
     cursor: pointer;
-    transition: all 0.18s cubic-bezier(.4,0,.2,1);
+    transition: all 0.18s cubic-bezier(.4, 0, .2, 1);
     z-index: 1;
     min-width: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     overflow: hidden;
 }
 
@@ -1947,6 +1982,7 @@ section {
         padding: 0.35rem 0.55rem;
         font-size: 0.83rem;
     }
+
     .store-btn .store-icon {
         width: 18px;
         height: 18px;
@@ -1958,6 +1994,7 @@ section {
         padding: 0.25rem 0.4rem;
         font-size: 0.78rem;
     }
+
     .store-btn .store-icon {
         width: 16px;
         height: 16px;
@@ -2044,31 +2081,31 @@ section {
     .container {
         padding: 0 var(--spacing-lg);
     }
-    
+
     .hero-logo-container {
         width: 220px;
         height: 220px;
     }
-    
+
     .hero-title {
         font-size: clamp(2.2rem, 6vw, 3rem);
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .use-cases-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .pricing-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .index-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: var(--spacing-md);
@@ -2080,31 +2117,31 @@ section {
     .container {
         padding: 0 var(--spacing-lg);
     }
-    
+
     .hero-logo-container {
         width: 200px;
         height: 200px;
     }
-    
+
     .hero-title {
         font-size: clamp(2rem, 6vw, 2.8rem);
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .use-cases-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .pricing-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     .index-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: var(--spacing-md);
@@ -2116,126 +2153,126 @@ section {
     .nav-menu {
         display: none;
     }
-    
+
     .nav-toggle {
         display: flex;
     }
-    
+
     .container {
         padding: 0 var(--spacing-md);
     }
-    
+
     .hero {
         padding-top: 70px;
         min-height: 90vh;
     }
-    
+
     .hero-logo-container {
         width: 180px;
         height: 180px;
     }
-    
+
     .hero-title {
         font-size: clamp(1.8rem, 5vw, 2.2rem);
         margin-bottom: var(--spacing-md);
     }
-    
+
     .hero-description {
         font-size: 1.1rem;
         margin-bottom: var(--spacing-lg);
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: var(--spacing-sm);
     }
-    
+
     .hero-buttons .btn {
         width: 100%;
         max-width: 280px;
         padding: 0.875rem 1.25rem;
     }
-    
+
     .section-title {
         font-size: clamp(1.5rem, 4vw, 2rem);
     }
-    
+
     .section-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-    
+
     .use-cases-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-    
+
     .pricing-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-    
+
     .pricing-card.featured {
         transform: none;
     }
-    
+
     .pricing-card.featured:hover {
         transform: translateY(-5px);
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: var(--spacing-lg);
     }
-    
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
         gap: var(--spacing-md);
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
         gap: var(--spacing-sm);
     }
-    
+
     .cta-buttons .btn {
         width: 100%;
         max-width: 280px;
     }
-    
+
     .index-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
-    
+
     .index-card {
         padding: var(--spacing-md);
     }
-    
+
     .index-icon {
         font-size: 2.2rem;
     }
-    
+
     .index-card h3 {
         font-size: 1.2rem;
     }
-    
+
     .step-card {
         padding: var(--spacing-md);
     }
-    
+
     .step-title {
         font-size: 1.3rem;
     }
-    
+
     .step-number {
         width: 45px;
         height: 45px;
@@ -2248,49 +2285,49 @@ section {
     .container {
         padding: 0 var(--spacing-sm);
     }
-    
+
     .nav {
         padding: var(--spacing-xs) var(--spacing-sm);
     }
-    
+
     .hero {
         padding-top: 60px;
         min-height: 85vh;
     }
-    
+
     .hero-logo-container {
         width: 150px;
         height: 150px;
     }
-    
+
     .hero-title {
         font-size: clamp(1.5rem, 4vw, 1.8rem);
         line-height: 1.2;
         margin-bottom: var(--spacing-sm);
     }
-    
+
     .hero-description {
         font-size: 1rem;
         margin-bottom: var(--spacing-md);
         padding: 0 var(--spacing-xs);
     }
-    
+
     .hero-buttons .btn {
         max-width: 250px;
         padding: 0.75rem 1rem;
         font-size: 0.95rem;
     }
-    
+
     .section-title {
         font-size: clamp(1.3rem, 3.5vw, 1.6rem);
         margin-bottom: var(--spacing-sm);
     }
-    
+
     .section-subtitle {
         font-size: 1rem;
         padding: 0 var(--spacing-xs);
     }
-    
+
     .step-card,
     .feature-card,
     .use-case-card,
@@ -2298,141 +2335,141 @@ section {
         padding: var(--spacing-sm);
         margin-bottom: var(--spacing-sm);
     }
-    
+
     .step-card {
         border-radius: var(--border-radius-lg);
     }
-    
+
     .step-title {
         font-size: 1.1rem;
         line-height: 1.3;
     }
-    
+
     .step-number {
         width: 35px;
         height: 35px;
         font-size: 1rem;
     }
-    
+
     .step-list li {
         padding: var(--spacing-xs);
         margin-bottom: var(--spacing-sm);
         font-size: 0.9rem;
     }
-    
+
     .step-list li::before {
         width: 18px;
         height: 18px;
         font-size: 0.65rem;
         left: -6px;
     }
-    
+
     .step-list-icon {
         width: 24px;
         height: 24px;
         font-size: 0.9em;
     }
-    
+
     .step-tip {
         padding: var(--spacing-sm);
         font-size: 0.9rem;
     }
-    
+
     .feature-card h3 {
         font-size: 1.1rem;
     }
-    
+
     .feature-card p {
         font-size: 0.9rem;
     }
-    
+
     .feature-icon {
         width: 50px;
         height: 50px;
     }
-    
+
     .use-case-card h3 {
         font-size: 1.1rem;
     }
-    
+
     .use-case-description {
         font-size: 0.9rem;
     }
-    
+
     .use-case-features li {
         font-size: 0.9rem;
     }
-    
+
     .use-case-example {
         font-size: 0.85rem;
         padding: var(--spacing-xs);
     }
-    
+
     .pricing-header h3 {
         font-size: 1.3rem;
     }
-    
+
     .price {
         font-size: 2.5rem;
     }
-    
+
     .pricing-features li {
         font-size: 0.9rem;
     }
-    
+
     .plan-info {
         font-size: 0.85rem;
         padding: var(--spacing-xs) var(--spacing-sm);
     }
-    
+
     .index-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
-    
+
     .index-card {
         padding: var(--spacing-sm);
     }
-    
+
     .index-icon {
         font-size: 2rem;
         margin-bottom: var(--spacing-sm);
     }
-    
+
     .index-card h3 {
         font-size: 1.1rem;
     }
-    
+
     .index-card p {
         font-size: 0.9rem;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
-    
+
     .footer-column h4 {
         font-size: 0.95rem;
     }
-    
+
     .footer-column a {
         font-size: 0.9rem;
     }
-    
+
     .cta-content h2 {
         font-size: 1.8rem;
     }
-    
+
     .cta-content p {
         font-size: 1rem;
     }
-    
+
     .steps-timeline::before {
         left: 17px;
     }
-    
-    
+
+
     /* Reducir efectos parallax en móviles para mejor performance */
     .hero-bg-element,
     .features-bg-element,
@@ -2441,21 +2478,21 @@ section {
         opacity: 0.01;
         animation-duration: 20s;
     }
-    
+
     .feature-card:hover,
     .use-case-card:hover,
     .pricing-card:hover {
-        transform: translateY(-2px) scale(1.005);
+        transform: translateY(-2px);
     }
-    
+
     .btn:hover {
         transform: translateY(-1px) scale(1.01);
     }
-    
+
     .step-card:hover {
         transform: translateY(-3px) scale(1.01);
     }
-    
+
     .index-card:hover {
         transform: translateY(-3px) scale(1.01);
     }
@@ -2467,6 +2504,7 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2478,6 +2516,7 @@ section {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -2489,6 +2528,7 @@ section {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -2556,6 +2596,7 @@ section {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -2572,7 +2613,7 @@ section {
 .feature-card:hover,
 .use-case-card:hover,
 .pricing-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
 }
 
 /* Efecto parallax para el logo del hero */
@@ -2626,6 +2667,7 @@ section {
 
 /* ===== MEJORAS DE ACCESIBILIDAD ===== */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -2639,6 +2681,7 @@ section {
 
 /* Prevenir zoom en iOS Safari */
 @media screen and (max-width: 767px) {
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -2652,14 +2695,21 @@ section {
 }
 
 /* Mejorar la responsividad de elementos de texto */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     word-wrap: break-word;
     overflow-wrap: break-word;
     -webkit-hyphens: auto;
     hyphens: auto;
 }
 
-p, span, div {
+p,
+span,
+div {
     word-wrap: break-word;
     overflow-wrap: break-word;
     -webkit-hyphens: auto;
@@ -2685,41 +2735,41 @@ p, span, div {
     .container {
         padding: 0 var(--spacing-xs);
     }
-    
+
     .hero-logo-container {
         width: 120px;
         height: 120px;
     }
-    
+
     .hero-title {
         font-size: clamp(1.3rem, 3vw, 1.5rem);
     }
-    
+
     .hero-description {
         font-size: 0.9rem;
         padding: 0 var(--spacing-xs);
     }
-    
+
     .section-title {
         font-size: clamp(1.2rem, 3vw, 1.4rem);
     }
-    
+
     .btn {
         padding: 0.6rem 0.8rem;
         font-size: 0.9rem;
     }
-    
+
     .step-card,
     .feature-card,
     .use-case-card,
     .pricing-card {
         padding: var(--spacing-xs);
     }
-    
+
     .index-card {
         padding: var(--spacing-xs);
     }
-    
+
     .index-icon {
         font-size: 1.8rem;
     }
@@ -2763,7 +2813,11 @@ p, span, div {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}   
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
