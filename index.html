@@ -10,7 +10,7 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://angel050521.github.io/gesty-landingPage/">
+    <meta property="og:url" content="https://gesty.app/">
     <meta property="og:title" content="Gesty - Gestión Financiera Profesional">
     <meta property="og:description" content="La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante y sincronización en la nube.">
     <meta property="og:image" content="https://gesty.app/assets/logo.png">
@@ -30,60 +30,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <style>
-        /* Separadores de sección */
-        .how-to-use .section-divider {
-            display: flex !important;
-            align-items: center !important;
-            margin: 3rem 0 !important;
-            gap: 1.5rem !important;
-            width: 100% !important;
-            max-width: 800px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        .how-to-use .divider-line {
-            flex: 1 !important;
-            height: 2px !important;
-            background: linear-gradient(90deg, transparent 0%, #00BFFF 50%, transparent 100%) !important;
-            border-radius: 1px !important;
-            min-width: 50px !important;
-        }
-
-        .how-to-use .divider-text {
-            font-size: 0.875rem !important;
-            font-weight: 600 !important;
-            color: #00BFFF !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.05em !important;
-            padding: 0.5rem 1rem !important;
-            background: #2A2F42 !important;
-            border: 1px solid rgba(0, 191, 255, 0.2) !important;
-            border-radius: 8px !important;
-            white-space: nowrap !important;
-            box-shadow: 0 0 10px rgba(0, 191, 255, 0.35), 0 0 20px rgba(0, 191, 255, 0.2) !important;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-            line-height: 1.2 !important;
-        }
-
-        /* Asegurar que todas las cards tengan el mismo tamaño */
-        .how-to-use .step-card {
-            width: 100% !important;
-            min-height: 300px !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-
-        .how-to-use .step-content {
-            flex: 1 !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-    </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-hidden">
         <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none">
             <path d="M12 3l7 3v5c0 4.97-3.38 9.61-7 10-3.62-.39-7-5.03-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             <path d="M9 12l2.2 2.2L15 10.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -137,6 +86,13 @@
         </symbol>
         <symbol id="i-lightbulb" viewBox="0 0 24 24" fill="none">
             <path d="M9 18h6m-5 2h4m-2-17a7 7 0 00-4 12v1h8v-1a7 7 0 00-4-12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-google-play" viewBox="0 0 24 24" fill="none">
+            <!-- Triángulo de play simple -->
+            <path d="M8 5v14l11-7-11-7z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-app-store" viewBox="0 0 24 24" fill="none">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="currentColor"/>
         </symbol>
     </svg>
 
@@ -195,7 +151,7 @@
                     
                     <div class="hero-content">
                         <h1 class="hero-title" id="hero-title">
-                            La forma <span class="highlight">profesional</span> de gestionar clientes, deudas y pedidos
+                            La aplicación gratuita y <span class="highlight">profesional</span> para gestionar clientes, deudas y pedidos
                         </h1>
                         <p class="hero-description">
                             Organiza tu negocio con una interfaz elegante, sincronización en la nube y reportes profesionales. 
@@ -219,25 +175,25 @@
                 </header>
                 
                 <div class="index-grid">
-                    <a href="#como-usar" class="index-card">
+                    <a href="#como-usar" class="index-card card-responsive">
                         <div class="index-icon">📚</div>
                         <h3>Cómo usar</h3>
                         <p>Aprende a usar Gesty paso a paso</p>
                     </a>
                     
-                    <a href="#caracteristicas" class="index-card">
+                    <a href="#caracteristicas" class="index-card card-responsive">
                         <div class="index-icon">⚡</div>
                         <h3>Características</h3>
                         <p>Descubre todas las funciones disponibles</p>
                     </a>
                     
-                    <a href="#planes" class="index-card">
+                    <a href="#planes" class="index-card card-responsive">
                         <div class="index-icon">💎</div>
                         <h3>Planes</h3>
                         <p>Elige el plan perfecto para tu negocio</p>
                     </a>
                     
-                    <a href="#casos-uso" class="index-card">
+                    <a href="#casos-uso" class="index-card card-responsive">
                         <div class="index-icon">🏢</div>
                         <h3>Casos de uso</h3>
                         <p>Perfecto para tu tipo de negocio</p>
@@ -262,7 +218,7 @@
                 
                 <div class="steps-timeline" role="list" aria-label="Pasos para usar Gesty">
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Paso 1">1</span>
                                 <h3 class="step-title">
@@ -300,7 +256,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Paso 2">2</span>
                                 <h3 class="step-title">
@@ -332,13 +288,13 @@
                                 </ol>
                             </div>
                             <div class="step-tip" role="note">
-                                <strong>Tip:</strong> Esto es muy utial para cualquier negocio que venda varios productos o servicios a un mismo cliente, despues de esto solo tienes que agregar los abonos o pagos del cliente.
+                                <strong>Tip:</strong> Esto es muy útil para cualquier negocio que venda varios productos o servicios a un mismo cliente, despues de esto solo tienes que agregar los abonos o pagos del cliente.
                             </div>
                         </div>
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Paso 3">3</span>
                                 <h3 class="step-title">
@@ -373,7 +329,7 @@
                                     Nota 1: Por defecto, muchas veces estará seleccionado el producto "cuenta principal" que se crea automáticamente al crear un cliente.
                                 </div>
                                 <div class="step-tip" role="note">
-                                    Nota 2: puedes tocar cualquier movimeinto para editarlo, puedes cambiar el monto, tipo de movimieto o descripción
+                                    Nota 2: puedes tocar cualquier movimiento para editarlo, puedes cambiar el monto, tipo de movimiento o descripción
                                 </div>
                             </div>
                         </div>
@@ -389,7 +345,7 @@
                 
                 <div class="steps-timeline" role="list" aria-label="Funciones extras de Gesty">
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Función 1">📄</span>
                                 <h3 class="step-title">
@@ -420,7 +376,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Función 2">💰</span>
                                 <h3 class="step-title">
@@ -467,7 +423,7 @@
                 
                 <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de resumen financiero">
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Función principal">📊</span>
                                 <h3 class="step-title">
@@ -485,7 +441,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Filtros">📅</span>
                                 <h3 class="step-title">
@@ -514,7 +470,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Pestaña General">📈</span>
                                 <h3 class="step-title">
@@ -555,7 +511,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Pestaña Clientes">👥</span>
                                 <h3 class="step-title">
@@ -590,7 +546,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Pestaña Pedidos">📦</span>
                                 <h3 class="step-title">
@@ -625,7 +581,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Pestaña Finanzas">💰</span>
                                 <h3 class="step-title">
@@ -660,7 +616,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Exportar PDF">📄</span>
                                 <h3 class="step-title">
@@ -707,7 +663,7 @@
                 
                 <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de pedidos">
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Función principal">📋</span>
                                 <h3 class="step-title">
@@ -724,7 +680,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Búsqueda">🔍</span>
                                 <h3 class="step-title">
@@ -758,7 +714,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Agregar">➕</span>
                                 <h3 class="step-title">
@@ -792,7 +748,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Gestionar">⚙️</span>
                                 <h3 class="step-title">
@@ -846,7 +802,7 @@
                                         <span class="step-list-icon" aria-hidden="true">⚙️</span>
                                         <div class="step-list-content">
                                             <strong>Elegir Acción:</strong> Se desplegará un menú desde la parte inferior con las siguientes opciones:
-                                            <ul style="margin-top: 0.5rem;">
+                                            <ul>
                                                 <li><strong>Editar:</strong> Modifica la información del pedido.</li>
                                                 <li><strong>Cancelar Pedido:</strong> Cambia el estado del pedido a "cancelado".</li>
                                                 <li><strong>Eliminar:</strong> Borra el pedido de forma permanente.</li>
@@ -862,7 +818,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Organizar">📂</span>
                                 <h3 class="step-title">
@@ -893,7 +849,7 @@
                     </article>
 
                     <article class="step-card-container" role="listitem">
-                        <div class="step-card">
+                        <div class="step-card card-responsive">
                             <header class="step-header">
                                 <span class="step-number" aria-label="Sincronización">☁️</span>
                                 <h3 class="step-title">
@@ -924,56 +880,56 @@
                 </header>
                 
                 <div class="features-grid" role="list" aria-label="Características de Gesty">
-                    <article class="feature-card fc--seguridad" role="listitem">
+                    <div class="feature-card card-responsive fc--seguridad" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+                            <svg class="icon" aria-label="Seguridad"><use href="#i-shield-check"/></svg>
                         </div>
                         <h3>Seguridad y acceso</h3>
                         <p>Inicio con Google, verificación de dispositivos, códigos de recuperación únicos y sincronización cifrada en la nube.</p>
-                    </article>
+                    </div>
 
-                    <article class="feature-card fc--clientes" role="listitem">
+                    <div class="feature-card card-responsive fc--clientes" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
+                            <svg class="icon" aria-label="Clientes"><use href="#i-users"/></svg>
                         </div>
                         <h3>Gestión de clientes</h3>
                         <p>Alta rápida, búsqueda inteligente, historial completo de movimientos y exportación a PDF con envío por WhatsApp.</p>
-                    </article>
+                    </div>
 
-                    <article class="feature-card fc--resumen" role="listitem">
+                    <div class="feature-card card-responsive fc--resumen" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>
+                            <svg class="icon" aria-label="Resumen financiero"><use href="#i-chart"/></svg>
                         </div>
                         <h3>Resumen financiero</h3>
                         <p>Cuatro pestañas con métricas completas: general, clientes, pedidos y finanzas. Filtros temporales y reportes PDF.</p>
-                    </article>
+                    </div>
 
-                    <article class="feature-card fc--pedidos" role="listitem">
+                    <div class="feature-card card-responsive fc--pedidos" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg>
+                            <svg class="icon" aria-label="Pedidos"><use href="#i-clipboard"/></svg>
                         </div>
                         <h3>Control de pedidos</h3>
                         <p>Estados automáticos, alta rápida con todos los datos, orden cronológico y registro de gastos por pedido.</p>
-                    </article>
+                    </div>
 
-                    <article class="feature-card fc--sync" role="listitem">
+                    <div class="feature-card card-responsive fc--sync" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-cloud-sync"/></svg>
+                            <svg class="icon" aria-label="Sincronización"><use href="#i-cloud-sync"/></svg>
                         </div>
                         <h3>Sincronización inteligente</h3>
                         <p>Trabajo offline, respaldo continuo, detección de conflictos y recuperación ante pérdida de datos.</p>
-                    </article>
+                    </div>
 
-                    <article class="feature-card fc--premium" role="listitem">
+                    <div class="feature-card card-responsive fc--premium" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-hidden="true"><use href="#i-lock-monitor"/></svg>
+                            <svg class="icon" aria-label="Centro de Control"><use href="#i-lock-monitor"/></svg>
                         </div>
                         <h3>Centro de Control Premium</h3>
                         <p>Gestión de sesiones activas, dispositivo principal, cierre remoto y monitoreo de accesos.</p>
-                    </article>
+                    </div>
                 </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
     <section id="casos-uso" class="use-cases">
         <!-- Elementos parallax de casos de uso -->
@@ -988,97 +944,95 @@
             </header>
             
             <div class="use-cases-grid">
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-bag"/></svg>
+                        <svg class="icon" aria-label="Boutiques y Tiendas"><use href="#i-bag"/></svg>
                     </div>
                     <h3>Boutiques y Tiendas</h3>
-                    <p class="use-case-description">Ideal para boutiques que venden múltiples productos a un mismo cliente con pagos diferidos</p>
+                    <p class="use-case-description">Ideal para boutiques que venden múltiples productos a un mismo cliente con pagos a credito</p>
                     <ul class="use-case-features">
-                        <li>Agregar varios productos por cliente</li>
+                        <li>Agregar varios productos al mismo cliente</li>
                         <li>Control de inventario por cliente</li>
                         <li>Pagos parciales y abonos</li>
                         <li>Historial de compras detallado</li>
                     </ul>
                     <div class="use-case-example">
-                        <strong>Ejemplo:</strong> María compra 3 blusas y 2 pantalones, paga $500 de anticipo y debe $800 restantes.
+                        <strong>Ejemplo:</strong> María compra 3 blusas y 2 pantalones con valor de $1300, paga $500 de anticipo y debe $800 restantes.
                     </div>
                 </div>
 
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-store"/></svg>
+                        <svg class="icon" aria-label="Tiendas de Abarrotes"><use href="#i-store"/></svg>
                     </div>
                     <h3>Tiendas de Abarrotes</h3>
-                    <p class="use-case-description">Perfecto para tiendas que fían productos del día a día a clientes de confianza</p>
+                    <p class="use-case-description">Perfecto para tiendas que fían productos del día a día a clientes de confianza con pagos a credito</p>
                     <ul class="use-case-features">
-                        <li>Registro rápido de productos fiados</li>
-                        <li>Control de límites de crédito</li>
-                        <li>Alertas de cobro automáticas</li>
-                        <li>Reporte de clientes morosos</li>
+                        <li>Registro rápido de productos fiados con el producto "Cuenta Principal"</li>
+                        <li>Búsqueda de clientes por nombre or teléfono</li>
+                        <li>Generar reportes detallados con un solo click listos para compartir</li>
                     </ul>
                     <div class="use-case-example">
                         <strong>Ejemplo:</strong> Don Pedro lleva $150 en despensa, abona $50 y queda debiendo $100 en su cuenta.
                     </div>
                 </div>
 
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-cash"/></svg>
+                        <svg class="icon" aria-label="Prestamistas"><use href="#i-cash"/></svg>
                     </div>
                     <h3>Prestamistas</h3>
-                    <p class="use-case-description">Herramienta especializada para prestamistas que manejan múltiples clientes y préstamos</p>
+                    <p class="use-case-description">Útil para prestamistas que manejan múltiples clientes y préstamos con pagos a credito o de contado</p>
                     <ul class="use-case-features">
-                        <li>Gestión de préstamos e intereses</li>
-                        <li>Calendario de pagos</li>
-                        <li>Seguimiento de garantías</li>
-                        <li>Reportes de rentabilidad</li>
+                        <li>Gestión y busqueda de clientes por nombre o teléfono</li>
+                        <li>Generar reportes detallados con un solo click listos para compartir</li>
+                        <li>Gestionar un prestamo con el producto "Cuenta Principal" o varios prestamos creando un producto para cada prestamo</li>
                     </ul>
                     <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Préstamo de $5,000 a Ana con 10% mensual, pagos quincenales de $275.
+                        <strong>Ejemplo:</strong> Dos prestamos a Juan, uno de $1000 y otro de $2000, el primero pagado y el segundo pendiente de pago.
                     </div>
                 </div>
 
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-flower"/></svg>
+                        <svg class="icon" aria-label="Florerias"><use href="#i-flower"/></svg>
                     </div>
-                    <h3>Floristerías</h3>
-                    <p class="use-case-description">Ideal para floristerías que manejan pedidos especiales y entregas programadas</p>
+                    <h3>Florerias</h3>
+                    <p class="use-case-description">Ideal para Florerias que manejan pedidos especiales y entregas programadas con pagos a credito o de contado</p>
                     <ul class="use-case-features">
-                        <li>Pedidos con fechas de entrega</li>
-                        <li>Control de anticipos</li>
-                        <li>Seguimiento de eventos especiales</li>
-                        <li>Gestión de proveedores</li>
+                        <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
+                        <li>Busqueda de pedidos por nombre o teléfono</li>
+                        <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
+                        <li>Ordenamiento facil con las listas desplegables</li>
                     </ul>
                     <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Arreglo para boda el 15 de marzo, anticipo $800, saldo $1,200 al entregar.
+                        <strong>Ejemplo:</strong> Arreglo para boda el 15 de marzo a las 12:00 pm, con precio de $1,200.
                     </div>
                 </div>
 
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-cake"/></svg>
+                        <svg class="icon" aria-label="Repostería"><use href="#i-cake"/></svg>
                     </div>
                     <h3>Repostería y Pasteles</h3>
-                    <p class="use-case-description">Perfecto para reposteros que hacen pasteles y postres sobre pedido</p>
+                    <p class="use-case-description">Perfecto para reposteros que hacen pasteles y postres sobre pedido con pagos a credito o de contado</p>
                     <ul class="use-case-features">
-                        <li>Pedidos personalizados</li>
-                        <li>Control de ingredientes y costos</li>
-                        <li>Calendario de producción</li>
-                        <li>Galería de trabajos realizados</li>
+                        <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
+                        <li>Busqueda de pedidos por nombre o teléfono</li>
+                        <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
+                        <li>Ordenamiento facil con las listas desplegables</li>
                     </ul>
                     <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Pastel de chocolate para 20 personas, entrega sábado, total $240.
+                        <strong>Ejemplo:</strong> Pastel de chocolate con mensaje escrito "Felicidades Angel", entrega sábado 21 a las 3:00 pm, con precio de $740.
                     </div>
                 </div>
 
-                <div class="use-case-card">
+                <div class="use-case-card card-responsive">
                     <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon"><use href="#i-lightbulb"/></svg>
+                        <svg class="icon" aria-label="Microemprendimientos"><use href="#i-lightbulb"/></svg>
                     </div>
                     <h3>Microemprendimientos</h3>
-                    <p class="use-case-description">Ideal para emprendedores que hacen minidonas, brownies, postres y productos caseros</p>
+                    <p class="use-case-description">Ideal para emprendedores que hacen minidonas, brownies, postres y productos caseros con pagos a credito o de contado</p>
                     <ul class="use-case-features">
                         <li>Gestión de pedidos pequeños</li>
                         <li>Control de costos por producto</li>
@@ -1093,7 +1047,8 @@
 
             <div class="use-cases-cta">
                 <h3>¿Tu negocio es diferente?</h3>
-                <p>Gesty se adapta a cualquier modelo de negocio que maneje clientes, deudas o pedidos</p>
+                <p>Gesty se adapta a cualquier modelo de negocio que maneje clientes, deudas o pedidos con pagos a credito</p>
+            </div>
             </div>
         </div>
     </section>
@@ -1108,7 +1063,7 @@
             <h2 class="section-title">Elige el plan perfecto para tu negocio</h2>
             
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card card-responsive">
                     <div class="pricing-header">
                         <h3>Gratis</h3>
                         <div class="price">$0</div>
@@ -1122,7 +1077,7 @@
                     <span class="plan-info">Plan gratuito disponible</span>
                 </div>
 
-                <div class="pricing-card">
+                <div class="pricing-card card-responsive">
                     <div class="pricing-header">
                         <h3>Nube</h3>
                         <div class="price">$100 <span class="currency">MXN</span></div>
@@ -1166,11 +1121,17 @@
     <section class="final-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Conoce más sobre Gesty</h2>
-                <p>Descubre todas las funciones disponibles para organizar tu negocio de forma profesional</p>
+                <h2>Descarga Gesty</h2>
+                <p>Descubre todas las funciones disponibles para organizar tu negocio de forma profesional y gratuita</p>
                 <div class="cta-buttons">
-                    <a href="#caracteristicas" class="btn btn-primary large">Ver características</a>
-                    <a href="#planes" class="btn btn-secondary large">Ver planes</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado" class="btn btn-primary large store-btn">
+                        <svg class="store-icon" aria-hidden="true"><use href="#i-google-play"/></svg>
+                        <span>Google Play</span>
+                    </a>
+                    <button class="btn btn-secondary large store-btn" disabled type="button" aria-label="Próximamente en iOS">
+                        <svg class="store-icon" aria-hidden="true"><use href="#i-app-store"/></svg>
+                        <span>Próximamente en iOS</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1190,16 +1151,16 @@
                 
                 <nav class="footer-links" aria-label="Enlaces del pie de página">
                     <div class="footer-column">
-                        <h4>Producto</h4>
+                        <span class="footer-heading">Producto</span>
                         <ul>
                             <li><a href="#caracteristicas">Características</a></li>
                             <li><a href="#planes">Planes</a></li>
-                            <li><a href="#download" aria-label="Descargar Gesty">Descargar</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado" aria-label="Descargar Gesty">Descargar</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Información</h4>
+                        <span class="footer-heading">Información</span>
                         <ul>
                             <li><a href="#como-usar">Cómo usar</a></li>
                             <li><a href="#caracteristicas">Características</a></li>
@@ -1208,11 +1169,11 @@
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Legal</h4>
+                        <span class="footer-heading">Legal</span>
                         <ul>
-                            <li><a href="#terms" aria-label="Términos de uso">Términos de uso</a></li>
-                            <li><a href="#privacy" aria-label="Política de privacidad">Privacidad</a></li>
-                            <li><a href="#cookies" aria-label="Política de cookies">Cookies</a></li>
+                            <li><span class="footer-link-disabled">Términos de uso</span></li>
+                            <li><span class="footer-link-disabled">Política de privacidad</span></li>
+                            <li><span class="footer-link-disabled">Cookies</span></li>
                         </ul>
                     </div>
                 </nav>
@@ -1224,206 +1185,7 @@
         </div>
     </footer>
 
-    <script>
-        // Funcionalidad mejorada del menú hamburguesa y características modernas
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMobile = document.querySelector('.nav-mobile');
-            const navMobileLinks = document.querySelectorAll('.nav-mobile-link');
-            const header = document.querySelector('.header');
-            
-            // Toggle del menú móvil
-            navToggle.addEventListener('click', function() {
-                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                
-                navToggle.setAttribute('aria-expanded', !isExpanded);
-                navMobile.setAttribute('aria-hidden', isExpanded);
-                
-                // Prevenir scroll del body cuando el menú está abierto
-                document.body.style.overflow = isExpanded ? 'auto' : 'hidden';
-            });
-            
-            // Cerrar menú al hacer click en un enlace
-            navMobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navMobile.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            // Cerrar menú al hacer click fuera
-            document.addEventListener('click', function(e) {
-                if (!navToggle.contains(e.target) && !navMobile.contains(e.target)) {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navMobile.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Cerrar menú con tecla Escape
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navMobile.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Smooth scroll mejorado para los enlaces de navegación
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerHeight = header.offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Cerrar menú móvil si está abierto
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        navMobile.setAttribute('aria-hidden', 'true');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
-            
-            // Efecto de scroll en el header
-            let lastScrollY = window.scrollY;
-            window.addEventListener('scroll', function() {
-                const currentScrollY = window.scrollY;
-                
-                if (currentScrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-                
-                lastScrollY = currentScrollY;
-            });
-            
-            // Animaciones de entrada con Intersection Observer
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observar elementos para animaciones
-            const animatedElements = document.querySelectorAll('.step-card, .feature-card, .use-case-card, .pricing-card, .index-card');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                observer.observe(el);
-            });
-            
-            // Efectos parallax avanzados
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                
-                // Parallax del hero
-                const hero = document.querySelector('.hero');
-                if (hero) {
-                    const rate = scrolled * -0.3;
-                    hero.style.transform = `translateY(${rate}px)`;
-                    
-                    // Parallax de elementos del hero
-                    const heroElements = document.querySelectorAll('.hero-bg-element');
-                    heroElements.forEach((element, index) => {
-                        const speed = 0.1 + (index * 0.05);
-                        const yPos = -(scrolled * speed);
-                        element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-                    });
-                }
-                
-                // Parallax de características
-                const featuresElements = document.querySelectorAll('.features-bg-element');
-                featuresElements.forEach((element, index) => {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                        const speed = 0.05 + (index * 0.02);
-                        const yPos = -(scrolled * speed);
-                        element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.05}deg)`;
-                    }
-                });
-                
-                // Parallax de casos de uso
-                const useCasesElements = document.querySelectorAll('.use-cases-bg-element');
-                useCasesElements.forEach((element, index) => {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                        const speed = 0.03 + (index * 0.01);
-                        const yPos = -(scrolled * speed);
-                        element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.03}deg)`;
-                    }
-                });
-                
-                // Parallax de precios
-                const pricingElements = document.querySelectorAll('.pricing-bg-element');
-                pricingElements.forEach((element, index) => {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                        const speed = 0.04 + (index * 0.015);
-                        const yPos = -(scrolled * speed);
-                        element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.04}deg)`;
-                    }
-                });
-            });
-            
-            // Mejorar accesibilidad del teclado
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Tab') {
-                    document.body.classList.add('keyboard-navigation');
-                }
-            });
-            
-            document.addEventListener('mousedown', function() {
-                document.body.classList.remove('keyboard-navigation');
-            });
-            
-            // Lazy loading para imágenes
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                });
-                
-                images.forEach(img => imageObserver.observe(img));
-            }
-            
-            // Preload de recursos críticos
-            const preloadLinks = [
-                'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
-            ];
-            
-            preloadLinks.forEach(href => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.as = 'style';
-                link.href = href;
-                document.head.appendChild(link);
-            });
-        });
-    </script>
 </body>
+
+
 </html>
