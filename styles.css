@@ -445,6 +445,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -662,6 +663,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 15px;
 }
 
 .hero-logo-img {
@@ -1696,21 +1698,22 @@ section {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
     margin-top: var(--spacing-2xl);
-    max-width: 1200px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     overflow-x: hidden;
+    padding: 0 var(--spacing-md);
 }
 
 .pricing-card {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-2xl);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -1718,6 +1721,7 @@ section {
     max-width: 100%;
     box-sizing: border-box;
     transform-origin: center center;
+    min-height: 400px;
 }
 
 .pricing-card:hover {
@@ -2085,6 +2089,7 @@ section {
     .hero-logo-container {
         width: 220px;
         height: 220px;
+        padding-top: 12px;
     }
 
     .hero-title {
@@ -2102,8 +2107,9 @@ section {
     }
 
     .pricing-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
     }
 
     .index-grid {
@@ -2121,6 +2127,7 @@ section {
     .hero-logo-container {
         width: 200px;
         height: 200px;
+        padding-top: 12px;
     }
 
     .hero-title {
@@ -2138,8 +2145,9 @@ section {
     }
 
     .pricing-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
     }
 
     .index-grid {
@@ -2170,6 +2178,7 @@ section {
     .hero-logo-container {
         width: 180px;
         height: 180px;
+        padding-top: 10px;
     }
 
     .hero-title {
@@ -2214,7 +2223,8 @@ section {
 
     .pricing-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
     }
 
     .pricing-card.featured {
@@ -2298,6 +2308,7 @@ section {
     .hero-logo-container {
         width: 150px;
         height: 150px;
+        padding-top: 10px;
     }
 
     .hero-title {
@@ -2739,6 +2750,7 @@ div {
     .hero-logo-container {
         width: 120px;
         height: 120px;
+        padding-top: 8px;
     }
 
     .hero-title {
