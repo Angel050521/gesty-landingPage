@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gesty - La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante, sincronización en la nube y reportes profesionales.">
+    <meta name="description"
+        content="Gesty - La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante, sincronización en la nube y reportes profesionales.">
     <meta name="keywords" content="gestión financiera, clientes, deudas, pedidos, negocio, contabilidad, facturación">
     <meta name="author" content="Gesty">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gesty.app/">
     <meta property="og:title" content="Gesty - Gestión Financiera Profesional">
-    <meta property="og:description" content="La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante y sincronización en la nube.">
+    <meta property="og:description"
+        content="La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante y sincronización en la nube.">
     <meta property="og:image" content="https://gesty.app/assets/logo.png">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gesty.app/">
     <meta property="twitter:title" content="Gesty - Gestión Financiera Profesional">
-    <meta property="twitter:description" content="La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante y sincronización en la nube.">
+    <meta property="twitter:description"
+        content="La forma profesional de gestionar clientes, deudas y pedidos. Organiza tu negocio con interfaz elegante y sincronización en la nube.">
     <meta property="twitter:image" content="https://gesty.app/assets/logo.png">
-    
+
     <title>Gesty - Gestión Financiera Profesional | Clientes, Deudas y Pedidos</title>
     <link rel="canonical" href="https://gesty.app/">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
 </head>
+
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-hidden">
         <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none">
-            <path d="M12 3l7 3v5c0 4.97-3.38 9.61-7 10-3.62-.39-7-5.03-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M9 12l2.2 2.2L15 10.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 3l7 3v5c0 4.97-3.38 9.61-7 10-3.62-.39-7-5.03-7-10V6l7-3Z" stroke="currentColor"
+                stroke-width="1.8" stroke-linejoin="round" />
+            <path d="M9 12l2.2 2.2L15 10.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
         </symbol>
         <symbol id="i-users" viewBox="0 0 24 24" fill="none">
-            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M4 19a7 7 0 0116 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0Z" stroke="currentColor" stroke-width="1.8" />
+            <path d="M4 19a7 7 0 0116 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
         </symbol>
         <symbol id="i-chart" viewBox="0 0 24 24" fill="none">
-            <path d="M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="6" y="10" width="3" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/>
-            <rect x="11" y="7" width="3" height="10" rx="1" stroke="currentColor" stroke-width="1.8"/>
-            <rect x="16" y="13" width="3" height="4" rx="1" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <rect x="6" y="10" width="3" height="7" rx="1" stroke="currentColor" stroke-width="1.8" />
+            <rect x="11" y="7" width="3" height="10" rx="1" stroke="currentColor" stroke-width="1.8" />
+            <rect x="16" y="13" width="3" height="4" rx="1" stroke="currentColor" stroke-width="1.8" />
         </symbol>
         <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none">
-            <path d="M9 4h6a2 2 0 012 2v12a2 2 0 01-2 2H9a2 2 0 01-2-2V6a2 2 0 012-2Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M9 7h6M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M9 4h6a2 2 0 012 2v12a2 2 0 01-2 2H9a2 2 0 01-2-2V6a2 2 0 012-2Z" stroke="currentColor"
+                stroke-width="1.8" />
+            <path d="M9 7h6M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
         </symbol>
         <symbol id="i-cloud-sync" viewBox="0 0 24 24" fill="none">
-            <path d="M7 18a4 4 0 010-8 5 5 0 019.7-1.4A3.5 3.5 0 0117.5 18H7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10 13l-1.5 1.5L10 16M14 16l1.5-1.5L14 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8.5 14.5h3M12.5 14.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M7 18a4 4 0 010-8 5 5 0 019.7-1.4A3.5 3.5 0 0117.5 18H7Z" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 13l-1.5 1.5L10 16M14 16l1.5-1.5L14 13" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.5 14.5h3M12.5 14.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
         </symbol>
         <symbol id="i-lock-monitor" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M12 19v2M8 21h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="9" y="9" width="6" height="5" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M10.5 9V8a1.5 1.5 0 013 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8" />
+            <path d="M12 19v2M8 21h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <rect x="9" y="9" width="6" height="5" rx="1.2" stroke="currentColor" stroke-width="1.8" />
+            <path d="M10.5 9V8a1.5 1.5 0 013 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
         </symbol>
         <symbol id="i-bag" viewBox="0 0 24 24" fill="none">
-            <path d="M6 7V6a6 6 0 1112 0v1" stroke="currentColor" stroke-width="1.8"/>
-            <rect x="4" y="7" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M6 7V6a6 6 0 1112 0v1" stroke="currentColor" stroke-width="1.8" />
+            <rect x="4" y="7" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8" />
         </symbol>
         <symbol id="i-store" viewBox="0 0 24 24" fill="none">
-            <path d="M3 9l1.5-6h15L21 9v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M3 9h18" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M9 13h6v8H9v-8z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3 9l1.5-6h15L21 9v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.8" />
+            <path d="M3 9h18" stroke="currentColor" stroke-width="1.8" />
+            <path d="M9 13h6v8H9v-8z" stroke="currentColor" stroke-width="1.8" />
         </symbol>
         <symbol id="i-cash" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M7 12h.01M17 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8" />
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+            <path d="M7 12h.01M17 12h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
         </symbol>
         <symbol id="i-flower" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M12 4a3 3 0 010 6 3 3 0 010-6zm0 10a3 3 0 010 6 3 3 0 010-6zm8-2a3 3 0 01-6 0 3 3 0 016 0zm-10 0a3 3 0 01-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.8" />
+            <path
+                d="M12 4a3 3 0 010 6 3 3 0 010-6zm0 10a3 3 0 010 6 3 3 0 010-6zm8-2a3 3 0 01-6 0 3 3 0 016 0zm-10 0a3 3 0 01-6 0 3 3 0 016 0z"
+                stroke="currentColor" stroke-width="1.8" />
         </symbol>
         <symbol id="i-cake" viewBox="0 0 24 24" fill="none">
-            <path d="M12 3v3m-7 6h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M5 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M12 3v3m-7 6h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z" stroke="currentColor" stroke-width="1.8" />
+            <path d="M5 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" />
         </symbol>
         <symbol id="i-lightbulb" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18h6m-5 2h4m-2-17a7 7 0 00-4 12v1h8v-1a7 7 0 00-4-12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 18h6m-5 2h4m-2-17a7 7 0 00-4 12v1h8v-1a7 7 0 00-4-12z" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
         <symbol id="i-google-play" viewBox="0 0 24 24" fill="none">
             <!-- Triángulo de play simple -->
-            <path d="M8 5v14l11-7-11-7z" fill="currentColor"/>
+            <path d="M8 5v14l11-7-11-7z" fill="currentColor" />
         </symbol>
         <symbol id="i-app-store" viewBox="0 0 24 24" fill="none">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="currentColor"/>
+            <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                fill="currentColor" />
         </symbol>
     </svg>
 
@@ -101,12 +118,13 @@
             <div class="nav-brand">
                 <a href="#inicio" class="logo-link" aria-label="Gesty - Ir al inicio">
                     <div class="logo">
-                        <img src="assets/logo.png" alt="Logo de Gesty" width="32" height="32" class="logo-img" loading="eager">
+                        <img src="assets/logo.png" alt="Logo de Gesty" width="32" height="32" class="logo-img"
+                            loading="eager">
                         <span class="brand-name">Gesty</span>
                     </div>
                 </a>
             </div>
-            
+
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="#como-usar" class="nav-link" role="menuitem">Cómo usar</a></li>
@@ -114,19 +132,21 @@
                     <li role="none"><a href="#planes" class="nav-link" role="menuitem">Planes</a></li>
                 </ul>
             </div>
-            
-            <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu" aria-haspopup="true">
+
+            <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false"
+                aria-controls="nav-menu" aria-haspopup="true">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
             </button>
         </nav>
-        
+
         <div class="nav-mobile" aria-hidden="true" id="nav-mobile" role="navigation" aria-label="Menú móvil">
             <div class="nav-mobile-content">
                 <ul class="nav-mobile-links" role="menubar">
                     <li role="none"><a href="#como-usar" class="nav-mobile-link" role="menuitem">Cómo usar</a></li>
-                    <li role="none"><a href="#caracteristicas" class="nav-mobile-link" role="menuitem">Características</a></li>
+                    <li role="none"><a href="#caracteristicas" class="nav-mobile-link"
+                            role="menuitem">Características</a></li>
                     <li role="none"><a href="#planes" class="nav-mobile-link" role="menuitem">Planes</a></li>
                 </ul>
             </div>
@@ -139,27 +159,42 @@
             <div class="hero-bg-element" aria-hidden="true"></div>
             <div class="hero-bg-element" aria-hidden="true"></div>
             <div class="hero-bg-element" aria-hidden="true"></div>
-            
+
             <div class="container">
                 <div class="hero-layout">
                     <div class="hero-logo">
                         <div class="hero-logo-container">
-                            <img src="assets/logo.png" alt="Logo de Gesty - Gestión Financiera Profesional" class="hero-logo-img" width="250" height="250" loading="eager">
+                            <img src="assets/logo.png" alt="Logo de Gesty - Gestión Financiera Profesional"
+                                class="hero-logo-img" width="250" height="250" loading="eager">
                             <div class="hero-logo-glow" aria-hidden="true"></div>
                         </div>
                     </div>
-                    
+
                     <div class="hero-content">
                         <h1 class="hero-title" id="hero-title">
-                            La aplicación gratuita y <span class="highlight">profesional</span> para gestionar clientes, deudas y pedidos
+                            La aplicación gratuita y <span class="highlight">profesional</span> para gestionar clientes,
+                            deudas y pedidos
                         </h1>
                         <p class="hero-description">
-                            Organiza tu negocio con una interfaz elegante, sincronización en la nube y reportes profesionales. 
+                            Organiza tu negocio con una interfaz elegante, sincronización en la nube y reportes
+                            profesionales.
                             Todo lo que necesitas para llevar el control financiero de tu empresa.
                         </p>
                         <div class="hero-buttons">
-                            <a href="#planes" class="btn btn-primary" role="button" aria-label="Ver información de planes">Ver información</a>
-                            <a href="#caracteristicas" class="btn btn-secondary" role="button" aria-label="Ver características">Ver características</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado"
+                                class="btn btn-primary large store-btn">
+                                <svg class="store-icon" aria-hidden="true">
+                                    <use href="#i-google-play" />
+                                </svg>
+                                <span>Google Play</span>
+                            </a>
+                            <button class="btn btn-secondary large store-btn" disabled type="button"
+                                aria-label="Próximamente en iOS">
+                                <svg class="store-icon" aria-hidden="true">
+                                    <use href="#i-app-store" />
+                                </svg>
+                                <span>Próximamente en iOS</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -173,26 +208,26 @@
                     <h2 class="section-title" id="index-title">Navega por Gesty</h2>
                     <p class="section-subtitle">Explora todas las funcionalidades y características de Gesty</p>
                 </header>
-                
+
                 <div class="index-grid">
                     <a href="#como-usar" class="index-card card-responsive">
                         <div class="index-icon">📚</div>
                         <h3>Cómo usar</h3>
                         <p>Aprende a usar Gesty paso a paso</p>
                     </a>
-                    
+
                     <a href="#caracteristicas" class="index-card card-responsive">
                         <div class="index-icon">⚡</div>
                         <h3>Características</h3>
                         <p>Descubre todas las funciones disponibles</p>
                     </a>
-                    
+
                     <a href="#planes" class="index-card card-responsive">
                         <div class="index-icon">💎</div>
                         <h3>Planes</h3>
                         <p>Elige el plan perfecto para tu negocio</p>
                     </a>
-                    
+
                     <a href="#casos-uso" class="index-card card-responsive">
                         <div class="index-icon">🏢</div>
                         <h3>Casos de uso</h3>
@@ -208,14 +243,14 @@
                     <h2 class="section-title" id="how-to-use-title">Domina Gesty en Minutos</h2>
                     <p class="section-subtitle">Sigue esta guía sencilla para aprender a usar Gesty en minutos.</p>
                 </header>
-                
+
                 <!-- Separador para pantalla de clientes -->
                 <div class="section-divider">
                     <div class="divider-line"></div>
                     <div class="divider-text">Pantalla de Clientes</div>
                     <div class="divider-line"></div>
                 </div>
-                
+
                 <div class="steps-timeline" role="list" aria-label="Pasos para usar Gesty">
                     <article class="step-card-container" role="listitem">
                         <div class="step-card card-responsive">
@@ -227,7 +262,9 @@
                                 </h3>
                             </header>
                             <div class="step-content">
-                                <p>Desde la pantalla de <strong>Clientes</strong>, presiona el botón <strong>"+"</strong> para abrir el formulario.</p>
+                                <p>Desde la pantalla de <strong>Clientes</strong>, presiona el botón
+                                    <strong>"+"</strong> para abrir el formulario.
+                                </p>
                                 <ol class="step-list">
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">✍️</span>
@@ -249,7 +286,8 @@
                                     </li>
                                 </ol>
                                 <div class="step-tip" role="note">
-                                    <strong>Nota:</strong> Si dejas presionado sobre un cliente en la lista, podrás editarlo o eliminarlo.
+                                    <strong>Nota:</strong> Si dejas presionado sobre un cliente en la lista, podrás
+                                    editarlo o eliminarlo.
                                 </div>
                             </div>
                         </div>
@@ -265,30 +303,36 @@
                                 </h3>
                             </header>
                             <div class="step-content">
-                                <p>Una vez creado el cliente, selecciónalo en la lista para ir a su perfil y agregar productos.</p>
+                                <p>Una vez creado el cliente, selecciónalo en la lista para ir a su perfil y agregar
+                                    productos.</p>
                                 <ol class="step-list">
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">👆</span>
                                         <div class="step-list-content">
-                                            <strong>Toca</strong> sobre el cliente recién creado en la lista de clientes.
+                                            <strong>Toca</strong> sobre el cliente recién creado en la lista de
+                                            clientes.
                                         </div>
                                     </li>
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">➕</span>
                                         <div class="step-list-content">
-                                            Presiona el botón <strong>"+"</strong> al lado de la sección de "cuenta principal".
+                                            Presiona el botón <strong>"+"</strong> al lado de la sección de "cuenta
+                                            principal".
                                         </div>
                                     </li>
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">📝</span>
                                         <div class="step-list-content">
-                                            <strong>Llena los datos:</strong> Nombre, descripción y precio inicial del producto o servicio.
+                                            <strong>Llena los datos:</strong> Nombre, descripción y precio inicial del
+                                            producto o servicio.
                                         </div>
                                     </li>
                                 </ol>
                             </div>
                             <div class="step-tip" role="note">
-                                <strong>Tip:</strong> Esto es muy útil para cualquier negocio que venda varios productos o servicios a un mismo cliente, despues de esto solo tienes que agregar los abonos o pagos del cliente.
+                                <strong>Tip:</strong> Esto es muy útil para cualquier negocio que venda varios productos
+                                o servicios a un mismo cliente, despues de esto solo tienes que agregar los abonos o
+                                pagos del cliente.
                             </div>
                         </div>
                     </article>
@@ -303,12 +347,14 @@
                                 </h3>
                             </header>
                             <div class="step-content">
-                                <p>Con un cliente y/o un producto ya creado a un cliente, puedes empezar a registrar cargos y pagos.</p>
+                                <p>Con un cliente y/o un producto ya creado a un cliente, puedes empezar a registrar
+                                    cargos y pagos.</p>
                                 <ol class="step-list">
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">🛒</span>
                                         <div class="step-list-content">
-                                            En la pantalla clientes, toca el campo "Selecciona un producto" y elige el producto al que le agregarás el movimiento.
+                                            En la pantalla clientes, toca el campo "Selecciona un producto" y elige el
+                                            producto al que le agregarás el movimiento.
                                         </div>
                                     </li>
                                     <li>
@@ -320,551 +366,619 @@
                                     <li>
                                         <span class="step-list-icon" aria-hidden="true">💵</span>
                                         <div class="step-list-content">
-                                            Ingresa el monto, selecciona si es un cargo o un pago y, si lo deseas, añade una descripción (puedes dejarla vacía). El sistema agregará automáticamente las comas separadoras al monto para facilitar la lectura.
+                                            Ingresa el monto, selecciona si es un cargo o un pago y, si lo deseas, añade
+                                            una descripción (puedes dejarla vacía). El sistema agregará automáticamente
+                                            las comas separadoras al monto para facilitar la lectura.
                                         </div>
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    Nota 1: Por defecto, muchas veces estará seleccionado el producto "cuenta principal" que se crea automáticamente al crear un cliente.
-                                </div>
-                                <div class="step-tip" role="note">
-                                    Nota 2: puedes tocar cualquier movimiento para editarlo, puedes cambiar el monto, tipo de movimiento o descripción
-                                </div>
+                            </div>
+                            </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                Nota 1: Por defecto, muchas veces estará seleccionado el producto "cuenta principal" que
+                                se crea automáticamente al crear un cliente.
+                            </div>
+                            <div class="step-tip" role="note">
+                                Nota 2: puedes tocar cualquier movimiento para editarlo, puedes cambiar el monto, tipo
+                                de movimiento o descripción
                             </div>
                         </div>
-                    </article>
                 </div>
-                
-                <!-- Separador para funciones extras -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-text">Funciones Extras</div>
-                    <div class="divider-line"></div>
-                </div>
-                
-                <div class="steps-timeline" role="list" aria-label="Funciones extras de Gesty">
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Función 1">📄</span>
-                                <h3 class="step-title">
-                                    Generar PDF
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Genera reportes profesionales en PDF con toda la información del cliente.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📱</span>
-                                        <div class="step-list-content">
-                                            <strong>Generar PDF:</strong> En la pantalla de clientes, presiona el botón <strong>"📄 PDF"</strong> para generar un reporte completo del cliente con todos sus movimientos.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📤</span>
-                                        <div class="step-list-content">
-                                            <strong>Compartir PDF:</strong> El PDF se generará automáticamente y podrás compartirlo por WhatsApp, correo electrónico o guardarlo en tu dispositivo.
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    <strong>Tip:</strong> Los PDFs incluyen toda la información del cliente: datos personales, productos, movimientos y saldos pendientes.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                </article>
+            </div>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Función 2">💰</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">💰</span>
-                                    Abono Global
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Realiza pagos que se distribuyan automáticamente entre todos los productos del cliente.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Presiona el botón en forma de cartera que está arriba a la derecha en cualquier cliente.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">💰</span>
-                                        <div class="step-list-content">
-                                         Presiona el botón "Abono Global".
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">💵</span>
-                                        <div class="step-list-content">
-                                            <strong>Ingresar monto:</strong> Escribe el monto total que el cliente va a pagar y el sistema distribuye automáticamente el pago entre todos los productos con saldo pendiente.
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    <strong>Tip:</strong> El abono global distribuye el pago proporcionalmente entre todos los productos con saldo pendiente del cliente, ahorrándote tiempo en cálculos manuales.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <!-- Separador para pantalla de resumen -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-text">Pantalla de Resumen Financiero</div>
-                    <div class="divider-line"></div>
-                </div>
-                
-                <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de resumen financiero">
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Función principal">📊</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">🎯</span>
-                                    Centro de Control Financiero
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Esta pantalla es tu centro de control financiero. Te ofrece una vista completa y organizada de las métricas más importantes de tu negocio, separadas en cuatro pestañas principales: <strong>General</strong>, <strong>Clientes</strong>, <strong>Pedidos</strong> y <strong>Finanzas</strong>.</p>
-                                <div class="step-tip" role="note">
-                                    <strong>💡 Tip:</strong> Todas las estadísticas se actualizan automáticamente y puedes filtrarlas por período de tiempo para análisis específicos.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+            <!-- Separador para funciones extras -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">Funciones Extras</div>
+                <div class="divider-line"></div>
+            </div>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Filtros">📅</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">⏰</span>
-                                    Filtrar Datos por Período
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Puedes ver las estadísticas de tu negocio según diferentes rangos de tiempo.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> En la parte superior, debajo del título, verás botones como "Hoy", "Esta semana", "Este mes", etc.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👇</span>
-                                        <div class="step-list-content">
-                                            <strong>Seleccionar:</strong> Toca cualquiera de los botones para que todas las estadísticas de la pantalla se actualicen y muestren únicamente los datos correspondientes a ese período de tiempo.
-                                        </div>
-                                    </li>
-                                </ol>
+            <div class="steps-timeline" role="list" aria-label="Funciones extras de Gesty">
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Función 1">📄</span>
+                            <h3 class="step-title">
+                                Generar PDF
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Genera reportes profesionales en PDF con toda la información del cliente.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📱</span>
+                                    <div class="step-list-content">
+                                        <strong>Generar PDF:</strong> En la pantalla de clientes, presiona el botón
+                                        <strong>"📄 PDF"</strong> para generar un reporte completo del cliente con todos
+                                        sus movimientos.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📤</span>
+                                    <div class="step-list-content">
+                                        <strong>Compartir PDF:</strong> El PDF se generará automáticamente y podrás
+                                        compartirlo por WhatsApp, correo electrónico o guardarlo en tu dispositivo.
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                <strong>Tip:</strong> Los PDFs incluyen toda la información del cliente: datos
+                                personales, productos, movimientos y saldos pendientes.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Pestaña General">📈</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">📊</span>
-                                    Pestaña "General"
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Aquí tienes un vistazo rápido de los indicadores más importantes de tu negocio.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📊</span>
-                                        <div class="step-list-content">
-                                            <strong>Ver Métricas Principales:</strong> Observa tarjetas con datos clave como Deuda Total, Total de Clientes, Abonos Recibidos y Ganancia Neta. Los colores te ayudan a identificar rápidamente estados positivos (verde) o de atención (rojo).
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">🔔</span>
-                                        <div class="step-list-content">
-                                            <strong>Revisar Alertas:</strong> Si hay algo importante, como pedidos atrasados, se mostrará una sección de alertas para que actúes de inmediato.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">🏆</span>
-                                        <div class="step-list-content">
-                                            <strong>Identificar Clientes Clave:</strong> Se muestra una lista con los 3 clientes que tienen la mayor deuda, permitiéndote acceder a su perfil con un solo toque.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">🔄</span>
-                                        <div class="step-list-content">
-                                            <strong>Actualizar Datos:</strong> Desliza el dedo hacia abajo en la pantalla para recargar y ver las estadísticas más recientes en cualquier momento.
-                                        </div>
-                                    </li>
-                                </ol>
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Función 2">💰</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">💰</span>
+                                Abono Global
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Realiza pagos que se distribuyan automáticamente entre todos los productos del cliente.
+                            </p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Presiona el botón en forma de cartera que está arriba
+                                        a la derecha en cualquier cliente.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">💰</span>
+                                    <div class="step-list-content">
+                                        Presiona el botón "Abono Global".
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">💵</span>
+                                    <div class="step-list-content">
+                                        <strong>Ingresar monto:</strong> Escribe el monto total que el cliente va a
+                                        pagar y el sistema distribuye automáticamente el pago entre todos los productos
+                                        con saldo pendiente.
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                <strong>Tip:</strong> El abono global distribuye el pago proporcionalmente entre todos
+                                los productos con saldo pendiente del cliente, ahorrándote tiempo en cálculos manuales.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
+            </div>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Pestaña Clientes">👥</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">👤</span>
-                                    Pestaña "Clientes"
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Analiza a fondo la información relacionada con tus clientes y sus deudas.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📈</span>
-                                        <div class="step-list-content">
-                                            <strong>Ver Estadísticas:</strong> Encuentra métricas como el saldo promedio que debe cada cliente y el total de cargos realizados en el período seleccionado.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📋</span>
-                                        <div class="step-list-content">
-                                            <strong>Consultar Lista de Deudores:</strong> Accede a una lista más detallada de todos los clientes que tienen deudas pendientes, ordenados de mayor a menor.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👤</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder a Perfil:</strong> Toca sobre cualquier cliente en la lista para ir directamente a su pantalla de movimientos y ver su historial completo.
-                                        </div>
-                                    </li>
-                                </ol>
+            <!-- Separador para pantalla de resumen -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">Pantalla de Resumen Financiero</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de resumen financiero">
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Función principal">📊</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">🎯</span>
+                                Centro de Control Financiero
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Esta pantalla es tu centro de control financiero. Te ofrece una vista completa y
+                                organizada de las métricas más importantes de tu negocio, separadas en cuatro pestañas
+                                principales: <strong>General</strong>, <strong>Clientes</strong>,
+                                <strong>Pedidos</strong> y <strong>Finanzas</strong>.
+                            </p>
+                            <div class="step-tip" role="note">
+                                <strong>💡 Tip:</strong> Todas las estadísticas se actualizan automáticamente y puedes
+                                filtrarlas por período de tiempo para análisis específicos.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Pestaña Pedidos">📦</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">📋</span>
-                                    Pestaña "Pedidos"
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Lleva un control claro y sencillo del estado de todos tus pedidos.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">🔢</span>
-                                        <div class="step-list-content">
-                                            <strong>Conteo de Pedidos:</strong> Visualiza rápidamente cuántos pedidos están Pendientes, Atrasados o ya fueron Hechos.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">💰</span>
-                                        <div class="step-list-content">
-                                            <strong>Ver Ingresos por Pedidos:</strong> Consulta el monto total de ingresos que has generado a través de los pedidos completados en el período que seleccionaste.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">⚠️</span>
-                                        <div class="step-list-content">
-                                            <strong>Alerta de Atrasos:</strong> Si tienes pedidos atrasados, el sistema te lo indicará de forma destacada para que no se te pasen por alto.
-                                        </div>
-                                    </li>
-                                </ol>
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Filtros">📅</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">⏰</span>
+                                Filtrar Datos por Período
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Puedes ver las estadísticas de tu negocio según diferentes rangos de tiempo.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> En la parte superior, debajo del título, verás botones
+                                        como "Hoy", "Esta semana", "Este mes", etc.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👇</span>
+                                    <div class="step-list-content">
+                                        <strong>Seleccionar:</strong> Toca cualquiera de los botones para que todas las
+                                        estadísticas de la pantalla se actualicen y muestren únicamente los datos
+                                        correspondientes a ese período de tiempo.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Pestaña General">📈</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">📊</span>
+                                Pestaña "General"
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Aquí tienes un vistazo rápido de los indicadores más importantes de tu negocio.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📊</span>
+                                    <div class="step-list-content">
+                                        <strong>Ver Métricas Principales:</strong> Observa tarjetas con datos clave como
+                                        Deuda Total, Total de Clientes, Abonos Recibidos y Ganancia Neta. Los colores te
+                                        ayudan a identificar rápidamente estados positivos (verde) o de atención (rojo).
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">🔔</span>
+                                    <div class="step-list-content">
+                                        <strong>Revisar Alertas:</strong> Si hay algo importante, como pedidos
+                                        atrasados, se mostrará una sección de alertas para que actúes de inmediato.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">🏆</span>
+                                    <div class="step-list-content">
+                                        <strong>Identificar Clientes Clave:</strong> Se muestra una lista con los 3
+                                        clientes que tienen la mayor deuda, permitiéndote acceder a su perfil con un
+                                        solo toque.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">🔄</span>
+                                    <div class="step-list-content">
+                                        <strong>Actualizar Datos:</strong> Desliza el dedo hacia abajo en la pantalla
+                                        para recargar y ver las estadísticas más recientes en cualquier momento.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Pestaña Clientes">👥</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">👤</span>
+                                Pestaña "Clientes"
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Analiza a fondo la información relacionada con tus clientes y sus deudas.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📈</span>
+                                    <div class="step-list-content">
+                                        <strong>Ver Estadísticas:</strong> Encuentra métricas como el saldo promedio que
+                                        debe cada cliente y el total de cargos realizados en el período seleccionado.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📋</span>
+                                    <div class="step-list-content">
+                                        <strong>Consultar Lista de Deudores:</strong> Accede a una lista más detallada
+                                        de todos los clientes que tienen deudas pendientes, ordenados de mayor a menor.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👤</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder a Perfil:</strong> Toca sobre cualquier cliente en la lista para
+                                        ir directamente a su pantalla de movimientos y ver su historial completo.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Pestaña Pedidos">📦</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">📋</span>
+                                Pestaña "Pedidos"
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Lleva un control claro y sencillo del estado de todos tus pedidos.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">🔢</span>
+                                    <div class="step-list-content">
+                                        <strong>Conteo de Pedidos:</strong> Visualiza rápidamente cuántos pedidos están
+                                        Pendientes, Atrasados o ya fueron Hechos.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">💰</span>
+                                    <div class="step-list-content">
+                                        <strong>Ver Ingresos por Pedidos:</strong> Consulta el monto total de ingresos
+                                        que has generado a través de los pedidos completados en el período que
+                                        seleccionaste.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">⚠️</span>
+                                    <div class="step-list-content">
+                                        <strong>Alerta de Atrasos:</strong> Si tienes pedidos atrasados, el sistema te
+                                        lo indicará de forma destacada para que no se te pasen por alto.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Pestaña Finanzas">💰</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">📊</span>
+                                Pestaña "Finanzas"
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Entiende la salud financiera de tu negocio, desde ingresos hasta la ganancia final.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">💸</span>
+                                    <div class="step-list-content">
+                                        <strong>Analizar Ganancias:</strong> Revisa un desglose claro de tus Ingresos
+                                        Brutos, tus Gastos Totales y, lo más importante, la Ganancia Final que te queda.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">🧾</span>
+                                    <div class="step-list-content">
+                                        <strong>Revisar Gastos:</strong> Consulta el monto total de gastos que has
+                                        registrado durante el período seleccionado.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">⚖️</span>
+                                    <div class="step-list-content">
+                                        <strong>Comparar con Mes Anterior:</strong> Si hay datos disponibles, puedes ver
+                                        una comparación del rendimiento de tu negocio respecto al mes anterior para
+                                        saber si vas mejorando.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Exportar PDF">📄</span>
+                            <h3 class="step-title">
+                                <span class="step-icon" aria-hidden="true">📊</span>
+                                Generar Reporte en PDF
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Exporta un resumen completo de todas tus estadísticas para guardarlo o compartirlo.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> En la pestaña "General", desliza hasta el final de la
+                                        pantalla.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📄</span>
+                                    <div class="step-list-content">
+                                        <strong>Presionar Botón:</strong> Toca el botón "Generar PDF de Estadísticas".
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📲</span>
+                                    <div class="step-list-content">
+                                        <strong>Compartir:</strong> La aplicación creará un archivo PDF con todo el
+                                        resumen financiero y te mostrará las opciones para compartirlo por WhatsApp,
+                                        correo, o cualquier otra app.
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                <strong>💡 Tip:</strong> Los reportes PDF incluyen gráficos, tablas y estadísticas
+                                completas del período seleccionado, perfectos para presentaciones o archivos de
+                                respaldo.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
+            </div>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Pestaña Finanzas">💰</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">📊</span>
-                                    Pestaña "Finanzas"
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Entiende la salud financiera de tu negocio, desde ingresos hasta la ganancia final.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">💸</span>
-                                        <div class="step-list-content">
-                                            <strong>Analizar Ganancias:</strong> Revisa un desglose claro de tus Ingresos Brutos, tus Gastos Totales y, lo más importante, la Ganancia Final que te queda.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">🧾</span>
-                                        <div class="step-list-content">
-                                            <strong>Revisar Gastos:</strong> Consulta el monto total de gastos que has registrado durante el período seleccionado.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">⚖️</span>
-                                        <div class="step-list-content">
-                                            <strong>Comparar con Mes Anterior:</strong> Si hay datos disponibles, puedes ver una comparación del rendimiento de tu negocio respecto al mes anterior para saber si vas mejorando.
-                                        </div>
-                                    </li>
-                                </ol>
+            <!-- Separador para pantalla de pedidos -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">Pantalla de Pedidos</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de pedidos">
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Función principal">📋</span>
+                            <h3 class="step-title">
+                                Central de Operaciones de Pedidos
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Esta es tu central de operaciones para gestionar todos los pedidos. Aquí puedes ver,
+                                buscar, organizar y modificar cada pedido de forma rápida y eficiente. La pantalla
+                                organiza tus pedidos en secciones inteligentes para que sepas cuáles requieren tu
+                                atención inmediata.</p>
+                            <div class="step-tip" role="note">
+                                <strong>💡 Tip:</strong> La pantalla se actualiza automáticamente y agrupa los pedidos
+                                por estado y fecha para facilitar tu gestión diaria.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Exportar PDF">📄</span>
-                                <h3 class="step-title">
-                                    <span class="step-icon" aria-hidden="true">📊</span>
-                                    Generar Reporte en PDF
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Exporta un resumen completo de todas tus estadísticas para guardarlo o compartirlo.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> En la pestaña "General", desliza hasta el final de la pantalla.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📄</span>
-                                        <div class="step-list-content">
-                                            <strong>Presionar Botón:</strong> Toca el botón "Generar PDF de Estadísticas".
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📲</span>
-                                        <div class="step-list-content">
-                                            <strong>Compartir:</strong> La aplicación creará un archivo PDF con todo el resumen financiero y te mostrará las opciones para compartirlo por WhatsApp, correo, o cualquier otra app.
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    <strong>💡 Tip:</strong> Los reportes PDF incluyen gráficos, tablas y estadísticas completas del período seleccionado, perfectos para presentaciones o archivos de respaldo.
-                                </div>
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Búsqueda">🔍</span>
+                            <h3 class="step-title">
+                                Buscar un Pedido
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Encuentra cualquier pedido al instante sin tener que desplazarte por toda la lista.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Toca la barra de búsqueda que se encuentra en la parte
+                                        superior de la pantalla.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">✍️</span>
+                                    <div class="step-list-content">
+                                        <strong>Escribir:</strong> Ingresa el nombre del pedido, el nombre del cliente o
+                                        su número de teléfono.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">✅</span>
+                                    <div class="step-list-content">
+                                        <strong>Ver Resultados:</strong> La lista se filtrará automáticamente en tiempo
+                                        real para mostrarte solo los pedidos que coincidan con tu búsqueda.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Agregar">➕</span>
+                            <h3 class="step-title">
+                                Agregar Gasto o Pedido
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Registra nuevos gastos o pedidos directamente desde la barra de navegación inferior.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Utiliza los botones que aparecen en la parte inferior
+                                        de la pantalla.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">💰</span>
+                                    <div class="step-list-content">
+                                        <strong>Agregar Gasto:</strong> Presiona el botón "Gasto" para abrir el
+                                        formulario y registrar un nuevo gasto asociado a tu negocio.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📦</span>
+                                    <div class="step-list-content">
+                                        <strong>Agregar Pedido:</strong> Presiona el botón "Pedido" para ir al
+                                        formulario de creación y registrar un nuevo pedido para un cliente.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Gestionar">⚙️</span>
+                            <h3 class="step-title">
+                                Gestionar un Pedido
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Realiza acciones rápidas sobre cada pedido directamente desde la lista.</p>
+
+                            <h4 class="step-subtitle">Marcar como Hecho / Pendiente</h4>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Toca la casilla de verificación (checkbox) que se
+                                        encuentra a la derecha de cualquier pedido.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">✅</span>
+                                    <div class="step-list-content">
+                                        <strong>Confirmar:</strong> Se abrirá una ventana para que confirmes la acción.
+                                        El pedido cambiará su estado entre "hecho" y "pendiente".
+                                    </div>
+                                </li>
+                            </ol>
+
+                            <h4 class="step-subtitle">Ver Detalles del Pedido</h4>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Simplemente toca cualquier parte de la tarjeta de un
+                                        pedido (excepto la casilla de verificación).
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📄</span>
+                                    <div class="step-list-content">
+                                        <strong>Consultar:</strong> Serás llevado a una pantalla con toda la información
+                                        detallada de ese pedido, incluyendo descripción, precios y más.
+                                    </div>
+                                </li>
+                            </ol>
+
+                            <h4 class="step-subtitle">Editar, Cancelar o Eliminar</h4>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">👆</span>
+                                    <div class="step-list-content">
+                                        <strong>Acceder:</strong> Mantén presionado el dedo sobre la tarjeta del pedido
+                                        que deseas modificar.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">⚙️</span>
+                                    <div class="step-list-content">
+                                        <strong>Elegir Acción:</strong> Se desplegará un menú desde la parte inferior
+                                        con las siguientes opciones:
+                                        <ul>
+                                            <li><strong>Editar:</strong> Modifica la información del pedido.</li>
+                                            <li><strong>Cancelar Pedido:</strong> Cambia el estado del pedido a
+                                                "cancelado".</li>
+                                            <li><strong>Eliminar:</strong> Borra el pedido de forma permanente.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                <strong>Nota:</strong> Las opciones pueden variar. Por ejemplo, no puedes editar un
+                                pedido que ya está marcado como completado o cancelado.
                             </div>
                         </div>
-                    </article>
-                </div>
-                
-                <!-- Separador para pantalla de pedidos -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-text">Pantalla de Pedidos</div>
-                    <div class="divider-line"></div>
-                </div>
-                
-                <div class="steps-timeline" role="list" aria-label="Funciones de la pantalla de pedidos">
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Función principal">📋</span>
-                                <h3 class="step-title">
-                                    Central de Operaciones de Pedidos
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Esta es tu central de operaciones para gestionar todos los pedidos. Aquí puedes ver, buscar, organizar y modificar cada pedido de forma rápida y eficiente. La pantalla organiza tus pedidos en secciones inteligentes para que sepas cuáles requieren tu atención inmediata.</p>
-                                <div class="step-tip" role="note">
-                                    <strong>💡 Tip:</strong> La pantalla se actualiza automáticamente y agrupa los pedidos por estado y fecha para facilitar tu gestión diaria.
-                                </div>
+                    </div>
+                </article>
+
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Organizar">📂</span>
+                            <h3 class="step-title">
+                                Organizar y Navegar la Lista
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>La pantalla agrupa tus pedidos automáticamente para que te enfoques en lo importante.</p>
+                            <ol class="step-list">
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">📂</span>
+                                    <div class="step-list-content">
+                                        <strong>Ver Secciones:</strong> Los pedidos se clasifican en grupos como "Hoy /
+                                        Vencidos", "Esta semana", "Completados" y "Cancelados".
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-list-icon" aria-hidden="true">↕️</span>
+                                    <div class="step-list-content">
+                                        <strong>Expandir/Contraer:</strong> Toca el encabezado de cualquier sección (por
+                                        ejemplo, "Esta semana") para ocultar o mostrar los pedidos que contiene,
+                                        permitiéndote tener una vista más limpia.
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="step-tip" role="note">
+                                <strong>💡 Tip:</strong> Las secciones se organizan por prioridad, mostrando primero los
+                                pedidos más urgentes que requieren tu atención.
                             </div>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Búsqueda">🔍</span>
-                                <h3 class="step-title">
-                                    Buscar un Pedido
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Encuentra cualquier pedido al instante sin tener que desplazarte por toda la lista.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Toca la barra de búsqueda que se encuentra en la parte superior de la pantalla.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">✍️</span>
-                                        <div class="step-list-content">
-                                            <strong>Escribir:</strong> Ingresa el nombre del pedido, el nombre del cliente o su número de teléfono.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">✅</span>
-                                        <div class="step-list-content">
-                                            <strong>Ver Resultados:</strong> La lista se filtrará automáticamente en tiempo real para mostrarte solo los pedidos que coincidan con tu búsqueda.
-                                        </div>
-                                    </li>
-                                </ol>
+                <article class="step-card-container" role="listitem">
+                    <div class="step-card card-responsive">
+                        <header class="step-header">
+                            <span class="step-number" aria-label="Sincronización">☁️</span>
+                            <h3 class="step-title">
+                                Sincronización Automática
+                            </h3>
+                        </header>
+                        <div class="step-content">
+                            <p>Si tienes un plan premium y conexión a internet, esta pantalla sincroniza automáticamente
+                                tus pedidos en la nube. Si haces cambios sin conexión, se guardarán y se subirán en
+                                cuanto te conectes de nuevo, ¡así tu información siempre está segura y respaldada!</p>
+                            <div class="step-tip" role="note">
+                                <strong>☁️ Tip:</strong> La sincronización funciona en segundo plano, por lo que puedes
+                                trabajar normalmente sin preocuparte por perder información.
                             </div>
                         </div>
-                    </article>
-
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Agregar">➕</span>
-                                <h3 class="step-title">
-                                    Agregar Gasto o Pedido
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Registra nuevos gastos o pedidos directamente desde la barra de navegación inferior.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Utiliza los botones que aparecen en la parte inferior de la pantalla.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">💰</span>
-                                        <div class="step-list-content">
-                                            <strong>Agregar Gasto:</strong> Presiona el botón "Gasto" para abrir el formulario y registrar un nuevo gasto asociado a tu negocio.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📦</span>
-                                        <div class="step-list-content">
-                                            <strong>Agregar Pedido:</strong> Presiona el botón "Pedido" para ir al formulario de creación y registrar un nuevo pedido para un cliente.
-                                        </div>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Gestionar">⚙️</span>
-                                <h3 class="step-title">
-                                    Gestionar un Pedido
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Realiza acciones rápidas sobre cada pedido directamente desde la lista.</p>
-                                
-                                <h4 class="step-subtitle">Marcar como Hecho / Pendiente</h4>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Toca la casilla de verificación (checkbox) que se encuentra a la derecha de cualquier pedido.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">✅</span>
-                                        <div class="step-list-content">
-                                            <strong>Confirmar:</strong> Se abrirá una ventana para que confirmes la acción. El pedido cambiará su estado entre "hecho" y "pendiente".
-                                        </div>
-                                    </li>
-                                </ol>
-
-                                <h4 class="step-subtitle">Ver Detalles del Pedido</h4>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Simplemente toca cualquier parte de la tarjeta de un pedido (excepto la casilla de verificación).
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📄</span>
-                                        <div class="step-list-content">
-                                            <strong>Consultar:</strong> Serás llevado a una pantalla con toda la información detallada de ese pedido, incluyendo descripción, precios y más.
-                                        </div>
-                                    </li>
-                                </ol>
-
-                                <h4 class="step-subtitle">Editar, Cancelar o Eliminar</h4>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">👆</span>
-                                        <div class="step-list-content">
-                                            <strong>Acceder:</strong> Mantén presionado el dedo sobre la tarjeta del pedido que deseas modificar.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">⚙️</span>
-                                        <div class="step-list-content">
-                                            <strong>Elegir Acción:</strong> Se desplegará un menú desde la parte inferior con las siguientes opciones:
-                                            <ul>
-                                                <li><strong>Editar:</strong> Modifica la información del pedido.</li>
-                                                <li><strong>Cancelar Pedido:</strong> Cambia el estado del pedido a "cancelado".</li>
-                                                <li><strong>Eliminar:</strong> Borra el pedido de forma permanente.</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    <strong>Nota:</strong> Las opciones pueden variar. Por ejemplo, no puedes editar un pedido que ya está marcado como completado o cancelado.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Organizar">📂</span>
-                                <h3 class="step-title">
-                                    Organizar y Navegar la Lista
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>La pantalla agrupa tus pedidos automáticamente para que te enfoques en lo importante.</p>
-                                <ol class="step-list">
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">📂</span>
-                                        <div class="step-list-content">
-                                            <strong>Ver Secciones:</strong> Los pedidos se clasifican en grupos como "Hoy / Vencidos", "Esta semana", "Completados" y "Cancelados".
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="step-list-icon" aria-hidden="true">↕️</span>
-                                        <div class="step-list-content">
-                                            <strong>Expandir/Contraer:</strong> Toca el encabezado de cualquier sección (por ejemplo, "Esta semana") para ocultar o mostrar los pedidos que contiene, permitiéndote tener una vista más limpia.
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="step-tip" role="note">
-                                    <strong>💡 Tip:</strong> Las secciones se organizan por prioridad, mostrando primero los pedidos más urgentes que requieren tu atención.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="step-card-container" role="listitem">
-                        <div class="step-card card-responsive">
-                            <header class="step-header">
-                                <span class="step-number" aria-label="Sincronización">☁️</span>
-                                <h3 class="step-title">
-                                    Sincronización Automática
-                                </h3>
-                            </header>
-                            <div class="step-content">
-                                <p>Si tienes un plan premium y conexión a internet, esta pantalla sincroniza automáticamente tus pedidos en la nube. Si haces cambios sin conexión, se guardarán y se subirán en cuanto te conectes de nuevo, ¡así tu información siempre está segura y respaldada!</p>
-                                <div class="step-tip" role="note">
-                                    <strong>☁️ Tip:</strong> La sincronización funciona en segundo plano, por lo que puedes trabajar normalmente sin preocuparte por perder información.
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
+            </div>
             </div>
         </section>
 
@@ -873,56 +987,73 @@
             <div class="features-bg-element" aria-hidden="true"></div>
             <div class="features-bg-element" aria-hidden="true"></div>
             <div class="features-bg-element" aria-hidden="true"></div>
-            
+
             <div class="container">
                 <header class="section-header">
                     <h2 class="section-title" id="features-title">Todo lo que necesitas en una sola app</h2>
                 </header>
-                
+
                 <div class="features-grid" role="list" aria-label="Características de Gesty">
                     <div class="feature-card card-responsive fc--seguridad" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Seguridad"><use href="#i-shield-check"/></svg>
+                            <svg class="icon" aria-label="Seguridad">
+                                <use href="#i-shield-check" />
+                            </svg>
                         </div>
                         <h3>Seguridad y acceso</h3>
-                        <p>Inicio con Google, verificación de dispositivos, códigos de recuperación únicos y sincronización cifrada en la nube.</p>
+                        <p>Inicio con Google, verificación de dispositivos, códigos de recuperación únicos y
+                            sincronización cifrada en la nube.</p>
                     </div>
 
                     <div class="feature-card card-responsive fc--clientes" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Clientes"><use href="#i-users"/></svg>
+                            <svg class="icon" aria-label="Clientes">
+                                <use href="#i-users" />
+                            </svg>
                         </div>
                         <h3>Gestión de clientes</h3>
-                        <p>Alta rápida, búsqueda inteligente, historial completo de movimientos y exportación a PDF con envío por WhatsApp.</p>
+                        <p>Alta rápida, búsqueda inteligente, historial completo de movimientos y exportación a PDF con
+                            envío por WhatsApp.</p>
                     </div>
 
                     <div class="feature-card card-responsive fc--resumen" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Resumen financiero"><use href="#i-chart"/></svg>
+                            <svg class="icon" aria-label="Resumen financiero">
+                                <use href="#i-chart" />
+                            </svg>
                         </div>
                         <h3>Resumen financiero</h3>
-                        <p>Cuatro pestañas con métricas completas: general, clientes, pedidos y finanzas. Filtros temporales y reportes PDF.</p>
+                        <p>Cuatro pestañas con métricas completas: general, clientes, pedidos y finanzas. Filtros
+                            temporales y reportes PDF.</p>
                     </div>
 
                     <div class="feature-card card-responsive fc--pedidos" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Pedidos"><use href="#i-clipboard"/></svg>
+                            <svg class="icon" aria-label="Pedidos">
+                                <use href="#i-clipboard" />
+                            </svg>
                         </div>
                         <h3>Control de pedidos</h3>
-                        <p>Estados automáticos, alta rápida con todos los datos, orden cronológico y registro de gastos por pedido.</p>
+                        <p>Estados automáticos, alta rápida con todos los datos, orden cronológico y registro de gastos
+                            por pedido.</p>
                     </div>
 
                     <div class="feature-card card-responsive fc--sync" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Sincronización"><use href="#i-cloud-sync"/></svg>
+                            <svg class="icon" aria-label="Sincronización">
+                                <use href="#i-cloud-sync" />
+                            </svg>
                         </div>
                         <h3>Sincronización inteligente</h3>
-                        <p>Trabajo offline, respaldo continuo, detección de conflictos y recuperación ante pérdida de datos.</p>
+                        <p>Trabajo offline, respaldo continuo, detección de conflictos y recuperación ante pérdida de
+                            datos.</p>
                     </div>
 
                     <div class="feature-card card-responsive fc--premium" role="listitem">
                         <div class="feature-icon" aria-hidden="true">
-                            <svg class="icon" aria-label="Centro de Control"><use href="#i-lock-monitor"/></svg>
+                            <svg class="icon" aria-label="Centro de Control">
+                                <use href="#i-lock-monitor" />
+                            </svg>
                         </div>
                         <h3>Centro de Control Premium</h3>
                         <p>Gestión de sesiones activas, dispositivo principal, cierre remoto y monitoreo de accesos.</p>
@@ -931,211 +1062,244 @@
             </div>
         </section>
 
-    <section id="casos-uso" class="use-cases">
-        <!-- Elementos parallax de casos de uso -->
-        <div class="use-cases-bg-element" aria-hidden="true"></div>
-        <div class="use-cases-bg-element" aria-hidden="true"></div>
-        <div class="use-cases-bg-element" aria-hidden="true"></div>
-        
-        <div class="container">
-            <header class="section-header">
-                <h2 class="section-title">Perfecto para tu tipo de negocio</h2>
-                <p class="section-subtitle">Gesty se adapta a las necesidades específicas de diferentes industrias y modelos de negocio</p>
-            </header>
-            
-            <div class="use-cases-grid">
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Boutiques y Tiendas"><use href="#i-bag"/></svg>
-                    </div>
-                    <h3>Boutiques y Tiendas</h3>
-                    <p class="use-case-description">Ideal para boutiques que venden múltiples productos a un mismo cliente con pagos a credito</p>
-                    <ul class="use-case-features">
-                        <li>Agregar varios productos al mismo cliente</li>
-                        <li>Control de inventario por cliente</li>
-                        <li>Pagos parciales y abonos</li>
-                        <li>Historial de compras detallado</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> María compra 3 blusas y 2 pantalones con valor de $1300, paga $500 de anticipo y debe $800 restantes.
-                    </div>
-                </div>
+        <section id="casos-uso" class="use-cases">
+            <!-- Elementos parallax de casos de uso -->
+            <div class="use-cases-bg-element" aria-hidden="true"></div>
+            <div class="use-cases-bg-element" aria-hidden="true"></div>
+            <div class="use-cases-bg-element" aria-hidden="true"></div>
 
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Tiendas de Abarrotes"><use href="#i-store"/></svg>
-                    </div>
-                    <h3>Tiendas de Abarrotes</h3>
-                    <p class="use-case-description">Perfecto para tiendas que fían productos del día a día a clientes de confianza con pagos a credito</p>
-                    <ul class="use-case-features">
-                        <li>Registro rápido de productos fiados con el producto "Cuenta Principal"</li>
-                        <li>Búsqueda de clientes por nombre or teléfono</li>
-                        <li>Generar reportes detallados con un solo click listos para compartir</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Don Pedro lleva $150 en despensa, abona $50 y queda debiendo $100 en su cuenta.
-                    </div>
-                </div>
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Perfecto para tu tipo de negocio</h2>
+                    <p class="section-subtitle">Gesty se adapta a las necesidades específicas de diferentes industrias y
+                        modelos de negocio</p>
+                </header>
 
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Prestamistas"><use href="#i-cash"/></svg>
-                    </div>
-                    <h3>Prestamistas</h3>
-                    <p class="use-case-description">Útil para prestamistas que manejan múltiples clientes y préstamos con pagos a credito o de contado</p>
-                    <ul class="use-case-features">
-                        <li>Gestión y busqueda de clientes por nombre o teléfono</li>
-                        <li>Generar reportes detallados con un solo click listos para compartir</li>
-                        <li>Gestionar un prestamo con el producto "Cuenta Principal" o varios prestamos creando un producto para cada prestamo</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Dos prestamos a Juan, uno de $1000 y otro de $2000, el primero pagado y el segundo pendiente de pago.
-                    </div>
-                </div>
-
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Florerias"><use href="#i-flower"/></svg>
-                    </div>
-                    <h3>Florerias</h3>
-                    <p class="use-case-description">Ideal para Florerias que manejan pedidos especiales y entregas programadas con pagos a credito o de contado</p>
-                    <ul class="use-case-features">
-                        <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
-                        <li>Busqueda de pedidos por nombre o teléfono</li>
-                        <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
-                        <li>Ordenamiento facil con las listas desplegables</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Arreglo para boda el 15 de marzo a las 12:00 pm, con precio de $1,200.
-                    </div>
-                </div>
-
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Repostería"><use href="#i-cake"/></svg>
-                    </div>
-                    <h3>Repostería y Pasteles</h3>
-                    <p class="use-case-description">Perfecto para reposteros que hacen pasteles y postres sobre pedido con pagos a credito o de contado</p>
-                    <ul class="use-case-features">
-                        <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
-                        <li>Busqueda de pedidos por nombre o teléfono</li>
-                        <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
-                        <li>Ordenamiento facil con las listas desplegables</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> Pastel de chocolate con mensaje escrito "Felicidades Angel", entrega sábado 21 a las 3:00 pm, con precio de $740.
-                    </div>
-                </div>
-
-                <div class="use-case-card card-responsive">
-                    <div class="use-case-icon" aria-hidden="true">
-                        <svg class="icon" aria-label="Microemprendimientos"><use href="#i-lightbulb"/></svg>
-                    </div>
-                    <h3>Microemprendimientos</h3>
-                    <p class="use-case-description">Ideal para emprendedores que hacen minidonas, brownies, postres y productos caseros con pagos a credito o de contado</p>
-                    <ul class="use-case-features">
-                        <li>Gestión de pedidos pequeños</li>
-                        <li>Control de costos por producto</li>
-                        <li>Seguimiento de clientes frecuentes</li>
-                        <li>Reportes de ganancias simples</li>
-                    </ul>
-                    <div class="use-case-example">
-                        <strong>Ejemplo:</strong> 2 docenas de brownies para oficina, entrega martes, total $240.
-                    </div>
-                </div>
-            </div>
-
-            <div class="use-cases-cta">
-                <h3>¿Tu negocio es diferente?</h3>
-                <p>Gesty se adapta a cualquier modelo de negocio que maneje clientes, deudas o pedidos con pagos a credito</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="planes" class="pricing">
-        <!-- Elementos parallax de precios -->
-        <div class="pricing-bg-element" aria-hidden="true"></div>
-        <div class="pricing-bg-element" aria-hidden="true"></div>
-        <div class="pricing-bg-element" aria-hidden="true"></div>
-        
-        <div class="container">
-            <h2 class="section-title">Elige el plan perfecto para tu negocio</h2>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card card-responsive">
-                    <div class="pricing-header">
-                        <h3>Gratis</h3>
-                        <div class="price">$0</div>
-                        <p class="price-period">Para siempre</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>Todas las funciones disponibles pero con guardado local</li>
+                <div class="use-cases-grid">
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Boutiques y Tiendas">
+                                <use href="#i-bag" />
+                            </svg>
+                        </div>
+                        <h3>Boutiques y Tiendas</h3>
+                        <p class="use-case-description">Ideal para boutiques que venden múltiples productos a un mismo
+                            cliente con pagos a credito</p>
+                        <ul class="use-case-features">
+                            <li>Agregar varios productos al mismo cliente</li>
+                            <li>Control de inventario por cliente</li>
+                            <li>Pagos parciales y abonos</li>
+                            <li>Historial de compras detallado</li>
                         </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> María compra 3 blusas y 2 pantalones con valor de $1300, paga $500
+                            de anticipo y debe $800 restantes.
+                        </div>
                     </div>
-                    <span class="plan-info">Plan gratuito disponible</span>
+
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Tiendas de Abarrotes">
+                                <use href="#i-store" />
+                            </svg>
+                        </div>
+                        <h3>Tiendas de Abarrotes</h3>
+                        <p class="use-case-description">Perfecto para tiendas que fían productos del día a día a
+                            clientes de confianza con pagos a credito</p>
+                        <ul class="use-case-features">
+                            <li>Registro rápido de productos fiados con el producto "Cuenta Principal"</li>
+                            <li>Búsqueda de clientes por nombre or teléfono</li>
+                            <li>Generar reportes detallados con un solo click listos para compartir</li>
+                        </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> Don Pedro lleva $150 en despensa, abona $50 y queda debiendo $100
+                            en su cuenta.
+                        </div>
+                    </div>
+
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Prestamistas">
+                                <use href="#i-cash" />
+                            </svg>
+                        </div>
+                        <h3>Prestamistas</h3>
+                        <p class="use-case-description">Útil para prestamistas que manejan múltiples clientes y
+                            préstamos con pagos a credito o de contado</p>
+                        <ul class="use-case-features">
+                            <li>Gestión y busqueda de clientes por nombre o teléfono</li>
+                            <li>Generar reportes detallados con un solo click listos para compartir</li>
+                            <li>Gestionar un prestamo con el producto "Cuenta Principal" o varios prestamos creando un
+                                producto para cada prestamo</li>
+                        </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> Dos prestamos a Juan, uno de $1000 y otro de $2000, el primero
+                            pagado y el segundo pendiente de pago.
+                        </div>
+                    </div>
+
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Florerias">
+                                <use href="#i-flower" />
+                            </svg>
+                        </div>
+                        <h3>Florerias</h3>
+                        <p class="use-case-description">Ideal para Florerias que manejan pedidos especiales y entregas
+                            programadas con pagos a credito o de contado</p>
+                        <ul class="use-case-features">
+                            <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
+                            <li>Busqueda de pedidos por nombre o teléfono</li>
+                            <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
+                            <li>Ordenamiento facil con las listas desplegables</li>
+                        </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> Arreglo para boda el 15 de marzo a las 12:00 pm, con precio de
+                            $1,200.
+                        </div>
+                    </div>
+
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Repostería">
+                                <use href="#i-cake" />
+                            </svg>
+                        </div>
+                        <h3>Repostería y Pasteles</h3>
+                        <p class="use-case-description">Perfecto para reposteros que hacen pasteles y postres sobre
+                            pedido con pagos a credito o de contado</p>
+                        <ul class="use-case-features">
+                            <li>Pedidos ordenados cronologicamente con fechas de entrega</li>
+                            <li>Busqueda de pedidos por nombre o teléfono</li>
+                            <li>Gestion de pedidos, ganancias y gastos desde la pantalla de resumen</li>
+                            <li>Ordenamiento facil con las listas desplegables</li>
+                        </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> Pastel de chocolate con mensaje escrito "Felicidades Angel",
+                            entrega sábado 21 a las 3:00 pm, con precio de $740.
+                        </div>
+                    </div>
+
+                    <div class="use-case-card card-responsive">
+                        <div class="use-case-icon" aria-hidden="true">
+                            <svg class="icon" aria-label="Microemprendimientos">
+                                <use href="#i-lightbulb" />
+                            </svg>
+                        </div>
+                        <h3>Microemprendimientos</h3>
+                        <p class="use-case-description">Ideal para emprendedores que hacen minidonas, brownies, postres
+                            y productos caseros con pagos a credito o de contado</p>
+                        <ul class="use-case-features">
+                            <li>Gestión de pedidos pequeños</li>
+                            <li>Control de costos por producto</li>
+                            <li>Seguimiento de clientes frecuentes</li>
+                            <li>Reportes de ganancias simples</li>
+                        </ul>
+                        <div class="use-case-example">
+                            <strong>Ejemplo:</strong> 2 docenas de brownies para oficina, entrega martes, total $240.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="pricing-card card-responsive">
-                    <div class="pricing-header">
-                        <h3>Nube</h3>
-                        <div class="price">$100 <span class="currency">MXN</span></div>
-                        <p class="price-period">por mes</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>Todo lo del plan Gratis</li>
-                            <li>Respaldo automático</li>
-                            <li>Sincronización en la nube</li>
-                            <li>Acceso en 1 dispositivo</li>
-                            <li>Soporte prioritario</li>
-                        </ul>
-                    </div>
-                    <span class="plan-info">Plan con sincronización en la nube</span>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Más popular</div>
-                    <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <div class="price">$150 <span class="currency">MXN</span></div>
-                        <p class="price-period">por mes</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>Todo lo del plan Nube</li>
-                            <li>Acceso multidispositivo</li>
-                            <li>Centro de Control</li>
-                            <li>Códigos de recuperación</li>
-                            <li>Reportes avanzados</li>
-                            <li>Soporte premium 24/7</li>
-                        </ul>
-                    </div>
-                    <span class="plan-info">Plan con funciones avanzadas</span>
+                <div class="use-cases-cta">
+                    <h3>¿Tu negocio es diferente?</h3>
+                    <p>Buscanos en tu tienda de apliciones favorita y dejanos un comentario con tus sugerencias,
+                        estaremos felices de escucharte</p>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Descarga Gesty</h2>
-                <p>Descubre todas las funciones disponibles para organizar tu negocio de forma profesional y gratuita</p>
-                <div class="cta-buttons">
-                    <a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado" class="btn btn-primary large store-btn">
-                        <svg class="store-icon" aria-hidden="true"><use href="#i-google-play"/></svg>
-                        <span>Google Play</span>
-                    </a>
-                    <button class="btn btn-secondary large store-btn" disabled type="button" aria-label="Próximamente en iOS">
-                        <svg class="store-icon" aria-hidden="true"><use href="#i-app-store"/></svg>
-                        <span>Próximamente en iOS</span>
-                    </button>
+        <section id="planes" class="pricing">
+            <!-- Elementos parallax de precios -->
+            <div class="pricing-bg-element" aria-hidden="true"></div>
+            <div class="pricing-bg-element" aria-hidden="true"></div>
+            <div class="pricing-bg-element" aria-hidden="true"></div>
+
+            <div class="container">
+                <h2 class="section-title">Elige el plan perfecto para tu negocio</h2>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card card-responsive">
+                        <div class="pricing-header">
+                            <h3>Gratis</h3>
+                            <div class="price">$0</div>
+                            <p class="price-period">Para siempre</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Todas las funciones disponibles pero con guardado local</li>
+                            </ul>
+                        </div>
+                        <span class="plan-info">Plan gratuito disponible</span>
+                    </div>
+
+                    <div class="pricing-card card-responsive">
+                        <div class="pricing-header">
+                            <h3>Nube</h3>
+                            <div class="price">$100 <span class="currency">MXN</span></div>
+                            <p class="price-period">por mes</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Todo lo del plan Gratis</li>
+                                <li>Respaldo automático</li>
+                                <li>Sincronización en la nube</li>
+                                <li>Acceso en 1 dispositivo</li>
+                                <li>Soporte prioritario</li>
+                            </ul>
+                        </div>
+                        <span class="plan-info">Plan con sincronización en la nube</span>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Más popular</div>
+                        <div class="pricing-header">
+                            <h3>Premium</h3>
+                            <div class="price">$150 <span class="currency">MXN</span></div>
+                            <p class="price-period">por mes</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Todo lo del plan Nube</li>
+                                <li>Acceso multidispositivo</li>
+                                <li>Centro de Control</li>
+                                <li>Códigos de recuperación</li>
+                                <li>Reportes avanzados</li>
+                                <li>Soporte premium 24/7</li>
+                            </ul>
+                        </div>
+                        <span class="plan-info">Plan con funciones avanzadas</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Descarga Gesty</h2>
+                    <p>Descubre todas las funciones disponibles para organizar tu negocio de forma profesional y
+                        gratuita</p>
+                    <div class="cta-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado"
+                            class="btn btn-primary large store-btn">
+                            <svg class="store-icon" aria-hidden="true">
+                                <use href="#i-google-play" />
+                            </svg>
+                            <span>Google Play</span>
+                        </a>
+                        <button class="btn btn-secondary large store-btn" disabled type="button"
+                            aria-label="Próximamente en iOS">
+                            <svg class="store-icon" aria-hidden="true">
+                                <use href="#i-app-store" />
+                            </svg>
+                            <span>Próximamente en iOS</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer" role="contentinfo">
@@ -1143,22 +1307,24 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="assets/logo.png" alt="Logo de Gesty" width="24" height="24" class="logo-img" loading="lazy">
+                        <img src="assets/logo.png" alt="Logo de Gesty" width="24" height="24" class="logo-img"
+                            loading="lazy">
                         <span class="brand-name">Gesty</span>
                     </div>
                     <p>La forma profesional de gestionar tu negocio</p>
                 </div>
-                
+
                 <nav class="footer-links" aria-label="Enlaces del pie de página">
                     <div class="footer-column">
                         <span class="footer-heading">Producto</span>
                         <ul>
                             <li><a href="#caracteristicas">Características</a></li>
                             <li><a href="#planes">Planes</a></li>
-                            <li><a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado" aria-label="Descargar Gesty">Descargar</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.miempresa.mifiado"
+                                    aria-label="Descargar Gesty">Descargar</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="footer-column">
                         <span class="footer-heading">Información</span>
                         <ul>
@@ -1167,7 +1333,7 @@
                             <li><a href="#planes">Planes disponibles</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="footer-column">
                         <span class="footer-heading">Legal</span>
                         <ul>
@@ -1178,7 +1344,7 @@
                     </div>
                 </nav>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Gesty. Todos los derechos reservados.</p>
             </div>
