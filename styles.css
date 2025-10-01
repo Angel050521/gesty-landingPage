@@ -163,18 +163,19 @@ img {
     left: 0;
     right: 0;
     background: rgba(27, 30, 47, 0.95);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: var(--z-fixed);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header.scrolled {
     background: rgba(27, 30, 47, 0.98);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav {
@@ -185,16 +186,26 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    height: 70px;
 }
 
 /* Logo y marca */
+.nav-brand {
+    z-index: 1001;
+}
+
 .logo-link {
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs);
+    border-radius: 12px;
 }
 
 .logo-link:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .logo {
@@ -204,24 +215,26 @@ img {
 }
 
 .brand-name {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: -0.02em;
 }
 
 .logo-link:hover .brand-name {
     color: var(--primary);
-    text-shadow: var(--neon);
+    text-shadow: 0 0 20px rgba(1, 135, 95, 0.5);
 }
 
 .logo-img {
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
 }
 
 .logo-link:hover .logo-img {
-    transform: scale(1.05);
-    filter: drop-shadow(var(--neon));
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 15px rgba(1, 135, 95, 0.4));
 }
 
 /* Menú de navegación */
@@ -233,9 +246,11 @@ img {
 
 .nav-links {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
     align-items: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-actions {
@@ -249,29 +264,34 @@ img {
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     font-size: 0.95rem;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    padding: var(--spacing-xs) 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 8px;
+    letter-spacing: -0.01em;
 }
 
 .nav-link:hover {
     color: var(--primary);
+    background: rgba(1, 135, 95, 0.1);
+    transform: translateY(-1px);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -2px;
-    left: 0;
+    bottom: 6px;
+    left: 50%;
     width: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--primary), var(--accent-light));
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 1px;
+    transform: translateX(-50%);
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 80%;
 }
 
 .nav-link--secondary {
@@ -302,39 +322,50 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
-    border-radius: var(--border-radius-sm);
-    transition: var(--transition);
+    padding: 8px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1001;
 }
 
 .nav-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(1, 135, 95, 0.1);
+    transform: scale(1.05);
 }
 
 .nav-toggle-line {
-    width: 20px;
-    height: 2px;
+    width: 24px;
+    height: 3px;
     background: var(--text-primary);
-    margin: 2px 0;
-    transition: var(--transition);
-    border-radius: 1px;
+    margin: 3px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+    transform-origin: center;
+}
+
+.nav-toggle[aria-expanded="true"] {
+    background: rgba(1, 135, 95, 0.15);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6px, 6px);
+    background: var(--primary);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(2) {
     opacity: 0;
+    transform: scale(0);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(6px, -6px);
+    background: var(--primary);
 }
 
 /* Menú móvil */
@@ -343,26 +374,43 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: var(--bg-main);
-    padding-top: 70px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(27, 30, 47, 0.98) 0%, rgba(20, 23, 35, 0.98) 100%);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding-top: 80px;
     transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: var(--z-modal);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
 .nav-mobile[aria-hidden="false"] {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    visibility: visible;
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(27, 30, 47, 0.99) 0%, rgba(20, 23, 35, 0.99) 100%);
+}
+
+.nav-mobile[aria-hidden="true"] {
+    transform: translateX(100%) !important;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .nav-mobile-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem 1rem 1rem;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    gap: var(--spacing-lg);
+    min-height: calc(100vh - 80px);
+    justify-content: flex-start;
+    background: rgba(27, 30, 47, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .nav-mobile-divider {
@@ -399,22 +447,82 @@ img {
 .nav-mobile-links {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
 }
 
 .nav-mobile-link {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     text-decoration: none;
-    padding: var(--spacing-xs) 0;
-    transition: var(--transition);
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: -0.02em;
+    background: rgba(42, 47, 66, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-mobile-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(1, 135, 95, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .nav-mobile-link:hover {
     color: var(--primary);
+    background: rgba(0, 191, 255, 0.2);
+    border-color: rgba(0, 191, 255, 0.4);
+    transform: translateY(-2px) scale(1.02);
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.15);
 }
+
+.nav-mobile-link:hover::before {
+    left: 100%;
+}
+
+/* Animación de entrada escalonada para elementos del menú móvil */
+.nav-mobile[aria-hidden="false"] .nav-mobile-link {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.nav-mobile[aria-hidden="false"] .nav-mobile-link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.nav-mobile[aria-hidden="false"] .nav-mobile-link:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.nav-mobile[aria-hidden="false"] .nav-mobile-link:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .nav-mobile-actions {
     margin-top: var(--spacing-md);
@@ -2166,6 +2274,35 @@ section {
         display: flex;
     }
 
+    /* Asegurar que el menú móvil tenga fondo sólido */
+    .nav-mobile {
+        background: linear-gradient(135deg, rgba(27, 30, 47, 0.99) 0%, rgba(20, 23, 35, 0.99) 100%);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+    }
+
+    /* Fallback para navegadores que no soportan backdrop-filter */
+    @supports not (backdrop-filter: blur(40px)) {
+        .nav-mobile {
+            background: linear-gradient(135deg, rgb(27, 30, 47) 0%, rgb(20, 23, 35) 100%);
+        }
+    }
+
+    .nav-mobile-content {
+        background: rgba(27, 30, 47, 0.5);
+    }
+
+    .nav-mobile-link {
+        background: rgba(42, 47, 66, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-mobile-link:hover {
+        background: rgba(0, 191, 255, 0.25);
+        border-color: rgba(0, 191, 255, 0.5);
+    }
+
     .container {
         padding: 0 var(--spacing-md);
     }
@@ -2656,24 +2793,45 @@ section {
     transform: translateY(-2px) scale(1.05);
 }
 
-/* Efectos parallax para elementos de navegación */
+/* Efectos parallax mejorados para elementos de navegación */
 .nav-link {
-    transition: transform 0.2s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
-/* Efecto parallax para el header */
+/* Efecto parallax mejorado para el header */
 .header {
-    transition: transform 0.3s ease-out, backdrop-filter 0.3s ease-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header.scrolled {
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     transform: translateY(0);
+}
+
+/* Efecto de flotación para el logo */
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.logo-img {
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+.logo-link:hover .logo-img {
+    animation-play-state: paused;
 }
 
 /* ===== MEJORAS DE ACCESIBILIDAD ===== */
@@ -2831,5 +2989,256 @@ div {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* ===== MEJ
+ORAS ADICIONALES DEL NAV MENU ===== */
+
+/* Estilos para enlaces activos */
+.nav-link.active,
+.nav-mobile-link.active {
+    color: var(--primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent-light));
+}
+
+/* Animación de ripple para el botón hamburguesa */
+@keyframes ripple {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Mejoras de transición para el header oculto */
+.header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto de glassmorphism mejorado para el nav móvil - integrado en la definición principal */
+
+/* Efecto de entrada para el menú móvil */
+.nav-mobile.opening {
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+
+    .nav-link:hover,
+    .nav-mobile-link:hover {
+        transform: none;
+        background: rgba(1, 135, 95, 0.15);
+    }
+
+    .logo-link:hover .logo-img {
+        animation-play-state: running;
+    }
+}
+
+/* Mejoras para pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .header {
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+    }
+
+    .nav-mobile {
+        -webkit-backdrop-filter: blur(35px);
+        backdrop-filter: blur(35px);
+    }
+}
+
+/* Estados de focus mejorados */
+.nav-link:focus-visible,
+.nav-mobile-link:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+/* Animación sutil para el brand name */
+.brand-name {
+    background: linear-gradient(45deg, var(--text-primary), var(--primary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.logo-link:hover .brand-name {
+    -webkit-text-fill-color: var(--primary);
+    animation-play-state: paused;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==
+=== MEJORAS RESPONSIVAS ADICIONALES PARA EL NAV ===== */
+
+/* Mejoras para tablets en orientación landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .nav {
+        padding: var(--spacing-xs) var(--spacing-md);
+        height: 60px;
+    }
+
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 320px) {
+    .nav {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .brand-name {
+        font-size: 1.4rem;
+    }
+
+    .nav-mobile-link {
+        font-size: 1.6rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* Mejoras para pantallas muy grandes */
+@media (min-width: 1400px) {
+    .nav {
+        max-width: 1400px;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .nav-links {
+        gap: var(--spacing-xxl);
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+}
+
+/* Mejoras para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    .header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-mobile {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Optimizaciones para dispositivos con batería baja */
+@media (prefers-reduced-motion: reduce) {
+    .logo-img {
+        animation: none;
+    }
+
+    .brand-name {
+        animation: none;
+        background: var(--text-primary);
+        -webkit-text-fill-color: initial;
+    }
+
+    .nav-mobile[aria-hidden="false"] .nav-mobile-link {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+/* 
+===== ESTILOS ADICIONALES PARA MENÚ MÓVIL ===== */
+/* Asegurar que el menú móvil sea completamente visible */
+.nav-mobile {
+    background-color: rgba(27, 30, 47, 0.98) !important;
+}
+
+.nav-mobile[aria-hidden="false"] {
+    background-color: rgba(27, 30, 47, 0.99) !important;
+}
+
+/* Asegurar que los enlaces del menú móvil tengan fondo sólido */
+.nav-mobile-link {
+    background-color: rgba(42, 47, 66, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-mobile-link:hover,
+.nav-mobile-link:focus {
+    background-color: rgba(0, 191, 255, 0.25) !important;
+    border-color: rgba(0, 191, 255, 0.5) !important;
+}
+
+/* Fallback para navegadores que no soportan backdrop-filter */
+@supports not (backdrop-filter: blur(30px)) {
+    .nav-mobile {
+        background-color: rgb(27, 30, 47) !important;
+    }
+    
+    .nav-mobile-content {
+        background-color: rgba(27, 30, 47, 0.8) !important;
+    }
+}
+
+/* Asegurar visibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-mobile {
+        background: linear-gradient(135deg, rgb(27, 30, 47) 0%, rgb(20, 23, 35) 100%) !important;
+    }
+    
+    .nav-mobile-link {
+        background: rgba(42, 47, 66, 0.95) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
     }
 }
