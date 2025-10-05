@@ -851,7 +851,6 @@ section {
     .hero-title:hover,
     .logo-link:hover .logo-img,
     .index-card:hover,
-    .step-card:hover .step-number,
     .index-card:hover .index-icon {
         transform: scale(1.01);
     }
@@ -871,13 +870,7 @@ section {
         font-size: 1.4rem;
     }
 
-    .step-card:hover {
-        transform: translateY(-6px) scale(1.02);
-    }
-
-    .step-card:hover .step-number {
-        transform: scale(1.1) rotate(5deg);
-    }
+    /* Hover deshabilitado para mejorar navegación móvil */
 
     /* Acordeón en móviles */
     .accordion-item {
@@ -1068,6 +1061,9 @@ section {
     position: relative;
     padding-top: 40px;
     overflow: visible;
+    /* Deshabilitar efectos táctiles en toda la sección */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 .how-to-use::before {
@@ -1183,22 +1179,9 @@ section {
     border: none;
     cursor: pointer;
     padding: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-header:hover {
-    transform: translateY(-2px);
-}
-
-.accordion-header:hover .divider-text {
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.15) 0%, rgba(0, 128, 255, 0.1) 100%);
-    border-color: rgba(0, 191, 255, 0.4);
-    box-shadow: 
-        0 0 15px rgba(0, 191, 255, 0.4),
-        0 0 30px rgba(0, 191, 255, 0.25),
-        0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .accordion-header .divider-text {
     display: flex;
@@ -1207,7 +1190,6 @@ section {
     gap: 1rem;
     padding: 1rem 2rem;
     font-size: 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     width: 100%;
     min-height: 60px;
@@ -1221,7 +1203,6 @@ section {
 
 .accordion-icon {
     font-size: 0.75rem;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--primary);
     font-weight: bold;
     flex-shrink: 0;
@@ -1236,7 +1217,6 @@ section {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
     opacity: 0;
     margin-bottom: 0;
 }
@@ -1244,18 +1224,6 @@ section {
 .accordion-content[aria-hidden="false"] {
     max-height: 10000px;
     opacity: 1;
-    animation: fadeInAccordion 0.4s ease-out;
-}
-
-@keyframes fadeInAccordion {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .steps-timeline {
@@ -1308,7 +1276,6 @@ section {
         0 2px 8px rgba(0, 0, 0, 0.05),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -1324,7 +1291,6 @@ section {
     height: 100%;
     background: linear-gradient(180deg, var(--primary), var(--accent-light));
     opacity: 0;
-    transition: var(--transition);
 }
 
 .step-card::after {
@@ -1338,31 +1304,12 @@ section {
             rgba(0, 191, 255, 0.08) 0%,
             rgba(0, 122, 255, 0.04) 100%);
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 0;
     border-radius: var(--border-radius-xl);
     filter: blur(6px);
 }
 
-.step-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.15),
-        0 8px 24px rgba(0, 191, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(0, 191, 255, 0.4);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
-}
-
-.step-card:hover::before {
-    opacity: 1;
-    width: 6px;
-}
-
-.step-card:hover::after {
-    opacity: 0.8;
-    filter: blur(8px);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-card .step-header,
 .step-card .step-content {
@@ -1394,7 +1341,6 @@ section {
         0 4px 12px rgba(0, 191, 255, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1408,37 +1354,10 @@ section {
     background: linear-gradient(45deg, var(--primary), var(--accent-light));
     border-radius: var(--border-radius-full);
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
-    animation: pulse 3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 0;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 0.1;
-        transform: scale(1.05);
-    }
-}
-
-.step-card:hover .step-number {
-    transform: scale(1.15) rotate(8deg);
-    box-shadow:
-        0 12px 32px rgba(0, 191, 255, 0.4),
-        0 6px 16px rgba(0, 191, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    background: linear-gradient(135deg, var(--accent-light) 0%, var(--primary) 100%);
-}
-
-.step-card:hover .step-number::before {
-    opacity: 0.3;
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-title {
     font-size: 1.7rem;
@@ -1447,27 +1366,18 @@ section {
     align-items: center;
     gap: var(--spacing-sm);
     color: var(--text-primary);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.3;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.step-card:hover .step-title {
-    color: var(--primary);
-    transform: translateX(8px);
-    text-shadow: 0 2px 4px rgba(0, 191, 255, 0.2);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-icon {
     font-size: 1.5em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
-.step-card:hover .step-icon {
-    transform: scale(1.3) rotate(15deg);
-    filter: drop-shadow(0 2px 4px rgba(0, 191, 255, 0.3));
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-content p {
     color: var(--text-secondary);
@@ -1475,7 +1385,6 @@ section {
     line-height: 1.8;
     font-size: 1.05rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .step-list {
@@ -1494,7 +1403,6 @@ section {
     position: relative;
     padding: var(--spacing-sm);
     border-radius: var(--border-radius);
-    transition: var(--transition);
     counter-increment: step-counter;
 }
 
@@ -1517,16 +1425,7 @@ section {
     z-index: 1;
 }
 
-.step-list li:hover {
-    background: rgba(0, 191, 255, 0.05);
-    transform: translateX(5px);
-    color: var(--text-primary);
-}
-
-.step-list li:hover::before {
-    transform: scale(1.1);
-    box-shadow: var(--neon-strong);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-list-icon {
     font-size: 1.2em;
@@ -1539,22 +1438,15 @@ section {
     justify-content: center;
     background: rgba(0, 191, 255, 0.1);
     border-radius: var(--border-radius);
-    transition: var(--transition);
 }
 
-.step-list li:hover .step-list-icon {
-    background: rgba(0, 191, 255, 0.2);
-    transform: scale(1.1);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-list-content {
     flex: 1;
-    transition: var(--transition);
 }
 
-.step-list li:hover .step-list-content {
-    transform: translateX(5px);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 .step-tip {
     background: linear-gradient(135deg, rgba(0, 191, 255, 0.08) 0%, rgba(0, 122, 255, 0.04) 100%);
@@ -1565,7 +1457,6 @@ section {
     color: var(--text-primary);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(5px);
     box-shadow:
         0 4px 12px rgba(0, 191, 255, 0.1),
@@ -1599,15 +1490,7 @@ section {
     margin-bottom: var(--spacing-xs);
 }
 
-.step-card:hover .step-tip {
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.12) 0%, rgba(0, 122, 255, 0.06) 100%);
-    border-color: rgba(0, 191, 255, 0.5);
-    transform: translateY(-4px);
-    box-shadow:
-        0 8px 20px rgba(0, 191, 255, 0.15),
-        0 4px 8px rgba(0, 191, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
+/* Hover deshabilitado para mejorar navegación móvil */
 
 /* ===== SECCIÓN CARACTERÍSTICAS ===== */
 
@@ -2718,13 +2601,7 @@ section {
         line-height: 1.6;
     }
 
-    .step-card:hover {
-        transform: translateY(-4px) scale(1.01);
-    }
-
-    .step-card:hover .step-number {
-        transform: scale(1.05) rotate(3deg);
-    }
+    /* Hover deshabilitado para mejorar navegación móvil */
 
     .step-card-container {
         padding-top: 6px;
@@ -2896,9 +2773,7 @@ section {
         transform: translateY(-1px) scale(1.01);
     }
 
-    .step-card:hover {
-        transform: translateY(-3px) scale(1.01);
-    }
+    /* Hover deshabilitado para mejorar navegación móvil */
 
     .index-card:hover {
         transform: translateY(-3px) scale(1.01);
@@ -3315,6 +3190,117 @@ ORAS ADICIONALES DEL NAV MENU ===== */
 
     .logo-link:hover .logo-img {
         animation-play-state: running;
+    }
+
+    /* Deshabilitar todas las animaciones y transiciones en la sección "Domina Gesty en Minutos" */
+    .step-card,
+    .card-responsive,
+    .step-number,
+    .step-title,
+    .step-icon,
+    .step-tip,
+    .step-list li,
+    .step-list-icon,
+    .step-list-content,
+    .accordion-header,
+    .accordion-icon,
+    .accordion-content {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .step-card:hover,
+    .card-responsive:hover {
+        transform: none !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+    }
+
+    .step-card:hover::before,
+    .step-card:hover::after {
+        opacity: 0 !important;
+    }
+
+    .step-card:hover .step-number,
+    .step-card:hover .step-title,
+    .step-card:hover .step-icon,
+    .step-card:hover .step-tip,
+    .step-list li:hover,
+    .step-list li:hover .step-list-icon,
+    .step-list li:hover .step-list-content,
+    .accordion-header:hover {
+        transform: none !important;
+        background: transparent !important;
+    }
+
+    /* Deshabilitar efectos :active y :focus en dispositivos táctiles */
+    .step-card:active,
+    .card-responsive:active,
+    .step-number:active,
+    .step-list li:active,
+    .step-list-icon:active,
+    .accordion-header:active,
+    .accordion-header:active .divider-text {
+        transform: none !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        scale: 1 !important;
+    }
+
+    .step-card:focus,
+    .card-responsive:focus,
+    .accordion-header:focus {
+        outline: none !important;
+    }
+
+    /* Deshabilitar el efecto de tap highlight en WebKit */
+    .step-card,
+    .card-responsive,
+    .step-number,
+    .step-list li,
+    .step-list-icon,
+    .accordion-header,
+    .accordion-header .divider-text {
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
+    }
+
+    /* Prevenir sticky hover en dispositivos táctiles */
+    @media (hover: none) {
+        .step-card:hover,
+        .step-list li:hover,
+        .accordion-header:hover {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+            transform: none !important;
+        }
+    }
+}
+
+/* Regla global para prevenir efectos táctiles en la sección "Domina Gesty en Minutos" */
+@media (max-width: 768px) {
+    .how-to-use * {
+        -webkit-tap-highlight-color: transparent !important;
+        pointer-events: auto !important;
+    }
+
+    /* Asegurar que los elementos interactivos mantengan su funcionalidad */
+    .accordion-header {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+
+    /* Prevenir cualquier transformación o animación al tocar */
+    .step-card:active,
+    .step-list li:active,
+    .step-number:active,
+    .step-icon:active {
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
     }
 }
 
