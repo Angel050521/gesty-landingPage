@@ -314,3 +314,36 @@ if (document.readyState === 'loading') {
         }
     }, 100);
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Inicializando acordeones...');
+
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const contentId = this.getAttribute('aria-controls');
+            const content = document.getElementById(contentId);
+
+            if (!content) return;
+
+            // Toggle estado
+            this.setAttribute('aria-expanded', !isExpanded);
+            content.setAttribute('aria-hidden', isExpanded);
+
+            // Animación suave
+            if (!isExpanded) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0';
+            }
+
+            console.log(`Acordeón ${contentId} ${!isExpanded ? 'abierto' : 'cerrado'}`);
+        });
+    });
+
+    // Todos los acordeones inician cerrados
+    console.log(`${accordionHeaders.length} acordeones inicializados (todos cerrados por defecto)`);
+});
