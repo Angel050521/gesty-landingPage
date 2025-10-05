@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Parallax scroll effects
     function parallaxScroll() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
 
         // Hero parallax
         const heroElements = document.querySelectorAll('.hero-bg-element');
