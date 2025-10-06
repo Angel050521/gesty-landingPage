@@ -169,7 +169,9 @@ img {
     transform: translateZ(0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: var(--z-fixed);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    contain: layout style paint;
 }
 
 .header.scrolled {
@@ -355,9 +357,11 @@ img {
     background: var(--primary);
 }
 
-/* Menú móvil */
+/* Menú móvil optimizado */
 .nav-mobile {
     display: none !important;
+    will-change: transform, opacity;
+    contain: layout style paint;
 }
 
 .nav-mobile[aria-hidden="false"] {
@@ -382,8 +386,9 @@ img {
     min-height: calc(100vh - 80px);
     justify-content: flex-start;
     background: rgba(15, 17, 23, 0.3);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    contain: layout style;
 }
 
 .nav-mobile-divider {
@@ -706,25 +711,94 @@ section {
     }
 }
 
-/* Reduce animaciones y blur en móviles y usuarios que prefieren menos movimiento */
-@media (max-width: 600px),
+/* Optimizaciones para móvil y usuarios que prefieren menos movimiento */
+@media (max-width: 768px),
 (prefers-reduced-motion: reduce) {
 
+    /* Deshabilitar animaciones pesadas en móvil */
     .hero-bg-element,
     .features-bg-element,
     .use-cases-bg-element,
     .pricing-bg-element {
-        animation: none;
-        opacity: 0.03;
+        animation: none !important;
+        opacity: 0.02;
+        transform: none !important;
+        will-change: auto;
     }
 
-    .header,
+    /* Reducir blur en móvil para mejor rendimiento */
+    .header {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+
     .hero,
     .features,
     .how-to-use,
     .use-cases {
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+    }
+
+    /* Optimizar transiciones en móvil */
+    .nav-link,
+    .nav-mobile-link,
+    .btn,
+    .index-card,
+    .step-card {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Deshabilitar hover effects en móvil */
+    .nav-link:hover,
+    .index-card:hover,
+    .step-card:hover {
+        transform: none;
+    }
+
+    /* Simplificar efectos de glow */
+    .hero-logo-glow {
+        filter: blur(30px);
+        opacity: 0.2;
+        animation: none;
+    }
+
+    /* Optimizar el header para móvil */
+    .header {
+        transition: transform 0.2s ease;
+    }
+}
+
+/* Optimizaciones específicas para dispositivos móviles */
+.mobile-optimized * {
+    will-change: auto !important;
+}
+
+.mobile-optimized .hero-bg-element,
+.mobile-optimized .features-bg-element,
+.mobile-optimized .pricing-bg-element {
+    display: none;
+}
+
+.mobile-optimized .nav-mobile {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-optimized .header {
+    transition: transform 0.2s ease;
+}
+
+/* Mejorar el rendimiento del scroll en móvil */
+@media (max-width: 768px) {
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+    
+    .header {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        backface-visibility: hidden;
     }
 }
 
