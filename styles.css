@@ -2415,17 +2415,74 @@ section {
     }
 }
 
-/* Breakpoint para tablets - Menú horizontal siempre visible */
+/* Breakpoint para móvil - Ocultar menú horizontal y mostrar hamburguesa */
 @media (max-width: 768px) {
     .nav-menu {
-        display: flex !important;
-        gap: var(--spacing-sm);
+        display: none !important;
     }
 
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 0.5rem 0.8rem;
+    .nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 1001;
     }
+
+    .nav-toggle:hover {
+        background: rgba(0, 191, 255, 0.1);
+        transform: scale(1.05);
+    }
+
+    .nav-mobile {
+        display: block !important;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        z-index: 1000;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-mobile-links {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .nav-mobile-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        text-decoration: none;
+        background: rgba(37, 42, 61, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-mobile-link:hover {
+        background: rgba(0, 191, 255, 0.2);
+        border-color: rgba(0, 191, 255, 0.4);
+        color: var(--primary);
+        transform: translateY(-2px);
+    }
+}
 
     .nav {
         padding: var(--spacing-sm) var(--spacing-md);
@@ -2592,7 +2649,7 @@ section {
         height: 45px;
         font-size: 1.3rem;
     }
-}
+
 
 /* Breakpoint para móviles pequeños */
 @media (max-width: 480px) {
@@ -3471,12 +3528,12 @@ ORAS ADICIONALES DEL NAV MENU ===== */
     }
 
     .nav-menu {
-        gap: var(--spacing-xs);
+        display: none !important;
     }
 
-    .nav-link {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.6rem;
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
     }
 
     .nav {
