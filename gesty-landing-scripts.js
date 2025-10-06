@@ -6,6 +6,17 @@ console.log('Gesty landing scripts loaded!');
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded, initializing nav...');
 
+    // Detectar dispositivos móviles y capacidades
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    const isLowEndDevice = navigator.hardwareConcurrency <= 2 || navigator.deviceMemory <= 2;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Configurar optimizaciones globales
+    if (isMobile || isLowEndDevice) {
+        document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
+        document.body.classList.add('mobile-optimized');
+    }
+
     const navToggle = document.querySelector('.nav-toggle');
     const navMobile = document.querySelector('.nav-mobile');
     const navMobileLinks = document.querySelectorAll('.nav-mobile-link');
@@ -29,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    // Función para toggle del menú móvil
+    // Función optimizada para toggle del menú móvil
     function toggleMobileMenu() {
         console.log('Toggling mobile menu...');
 
@@ -38,23 +49,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log('Current expanded state:', isExpanded, '-> New state:', newState);
 
-        // Actualizar atributos
-        navToggle.setAttribute('aria-expanded', newState);
-        navMobile.setAttribute('aria-hidden', !newState);
+        // Usar requestAnimationFrame para optimizar cambios de DOM
+        requestAnimationFrame(() => {
+            // Actualizar atributos
+            navToggle.setAttribute('aria-expanded', newState);
+            navMobile.setAttribute('aria-hidden', !newState);
 
-        // Agregar clase para animaciones
-        if (newState) {
-            navMobile.classList.add('opening');
-            setTimeout(() => navMobile.classList.remove('opening'), 400);
-        }
-
-        // Controlar scroll del body
-        document.body.style.overflow = newState ? 'hidden' : 'auto';
+            // Controlar scroll del body de manera más eficiente
+            if (newState) {
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+            } else {
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+            }
+        });
 
         console.log('Menu toggled. New states:', {
-            'aria-expanded': navToggle.getAttribute('aria-expanded'),
-            'aria-hidden': navMobile.getAttribute('aria-hidden'),
-            'body overflow': document.body.style.overflow
+            'aria-expanded': newState,
+            'aria-hidden': !newState
         });
     }
 
@@ -115,23 +130,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Header scroll effect mejorado (throttled with requestAnimationFrame)
+    // Header scroll effect optimizado para móvil
     let lastScrollY = window.scrollY;
     let ticking = false;
+    let scrollTimeout;
 
     function onScroll() {
         const currentScrollY = window.scrollY;
         const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+        const scrollDelta = Math.abs(currentScrollY - lastScrollY);
 
-        // Efecto de scroll básico
-        if (currentScrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        // Solo procesar si el scroll es significativo (reduce cálculos innecesarios)
+        if (scrollDelta < 5 && isMobile) {
+            ticking = false;
+            return;
         }
 
-        // Efecto de ocultación del header al hacer scroll hacia abajo
-        if (currentScrollY > 200 && scrollDirection === 'down') {
+        // Efecto de scroll básico con menos cálculos
+        if (currentScrollY > 50) {
+            if (!header.classList.contains('scrolled')) {
+                header.classList.add('scrolled');
+            }
+        } else {
+            if (header.classList.contains('scrolled')) {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        // Efecto de ocultación del header optimizado
+        if (currentScrollY > 200 && scrollDirection === 'down' && scrollDelta > 10) {
             header.style.transform = 'translateY(-100%)';
         } else if (scrollDirection === 'up' || currentScrollY < 200) {
             header.style.transform = 'translateY(0)';
@@ -141,60 +168,76 @@ document.addEventListener('DOMContentLoaded', function () {
         ticking = false;
     }
 
+    // Throttle más agresivo en móvil
     window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(onScroll);
+            if (isMobile) {
+                // En móvil, usar timeout más largo para reducir carga
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    window.requestAnimationFrame(onScroll);
+                }, 16); // ~60fps máximo
+            } else {
+                window.requestAnimationFrame(onScroll);
+            }
             ticking = true;
         }
-    });
+    }, { passive: true });
 
-    // Parallax scroll effects
+    // Parallax scroll effects - Deshabilitado en móvil para mejor rendimiento
     function parallaxScroll() {
+        // Deshabilitar parallax en móvil y dispositivos con preferencia de movimiento reducido
+        if (isMobile || prefersReducedMotion) {
+            parallaxTicking = false;
+            return;
+        }
+
         const scrolled = window.pageYOffset;
 
-        // Hero parallax
+        // Hero parallax - Solo si está visible
         const heroElements = document.querySelectorAll('.hero-bg-element');
-        heroElements.forEach((element, index) => {
-            const rect = element.getBoundingClientRect();
-            if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                const speed = 0.02 + (index * 0.01);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.02}deg)`;
-            }
-        });
+        if (heroElements.length > 0) {
+            const heroSection = document.querySelector('.hero');
+            const heroRect = heroSection?.getBoundingClientRect();
 
-        // Features parallax
+            if (heroRect && heroRect.bottom >= 0 && heroRect.top <= window.innerHeight) {
+                heroElements.forEach((element, index) => {
+                    const speed = 0.02 + (index * 0.01);
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.02}deg)`;
+                });
+            }
+        }
+
+        // Features parallax - Solo si está visible
         const featureElements = document.querySelectorAll('.features-bg-element');
-        featureElements.forEach((element, index) => {
-            const rect = element.getBoundingClientRect();
-            if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                const speed = 0.03 + (index * 0.01);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.03}deg)`;
-            }
-        });
+        if (featureElements.length > 0) {
+            const featuresSection = document.querySelector('.features');
+            const featuresRect = featuresSection?.getBoundingClientRect();
 
-        // Pricing parallax
-        const pricingElements = document.querySelectorAll('.pricing-bg-element');
-        pricingElements.forEach((element, index) => {
-            const rect = element.getBoundingClientRect();
-            if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-                const speed = 0.04 + (index * 0.015);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.04}deg)`;
+            if (featuresRect && featuresRect.bottom >= 0 && featuresRect.top <= window.innerHeight) {
+                featureElements.forEach((element, index) => {
+                    const speed = 0.03 + (index * 0.01);
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.03}deg)`;
+                });
             }
-        });
+        }
 
         parallaxTicking = false;
     }
 
     let parallaxTicking = false;
-    window.addEventListener('scroll', function () {
-        if (!parallaxTicking) {
-            window.requestAnimationFrame(parallaxScroll);
-            parallaxTicking = true;
-        }
-    });
+
+    // Solo agregar parallax si no es móvil
+    if (!isMobile && !prefersReducedMotion) {
+        window.addEventListener('scroll', function () {
+            if (!parallaxTicking) {
+                window.requestAnimationFrame(parallaxScroll);
+                parallaxTicking = true;
+            }
+        }, { passive: true });
+    }
 
     // Keyboard accessibility
     document.addEventListener('keydown', function (e) {
@@ -224,8 +267,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Indicador de sección activa en el nav
+    // Indicador de sección activa en el nav - Optimizado
     function updateActiveNavLink() {
+        // Reducir frecuencia en móvil
+        if (isMobile && Math.random() > 0.3) {
+            activeNavTicking = false;
+            return;
+        }
+
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link[href^="#"], .nav-mobile-link[href^="#"]');
 
@@ -240,22 +289,33 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.forEach(link => {
             const href = link.getAttribute('href').substring(1);
             if (href === currentSection) {
-                link.classList.add('active');
+                if (!link.classList.contains('active')) {
+                    link.classList.add('active');
+                }
             } else {
-                link.classList.remove('active');
+                if (link.classList.contains('active')) {
+                    link.classList.remove('active');
+                }
             }
         });
 
         activeNavTicking = false;
     }
 
-    // Actualizar enlaces activos en scroll
+    // Actualizar enlaces activos en scroll con throttling más agresivo en móvil
     window.addEventListener('scroll', function () {
         if (!activeNavTicking) {
-            window.requestAnimationFrame(updateActiveNavLink);
+            if (isMobile) {
+                // En móvil, actualizar menos frecuentemente
+                setTimeout(() => {
+                    window.requestAnimationFrame(updateActiveNavLink);
+                }, 100);
+            } else {
+                window.requestAnimationFrame(updateActiveNavLink);
+            }
             activeNavTicking = true;
         }
-    });
+    }, { passive: true });
 
     // Efecto de ripple en el botón hamburguesa
     function addRippleEffect(e) {
