@@ -377,33 +377,230 @@ if (document.readyState === 'loading') {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Inicializando acordeones...');
+    console.log('Inicializando acordeones mejorados...');
 
     const accordionHeaders = document.querySelectorAll('.accordion-header');
+    const accordionItems = document.querySelectorAll('.accordion-item');
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function () {
+    // Función para cerrar todos los acordeones excepto el actual
+    function closeOtherAccordions(currentHeader) {
+        accordionHeaders.forEach(header => {
+            if (header !== currentHeader) {
+                const contentId = header.getAttribute('aria-controls');
+                const content = document.getElementById(contentId);
+
+                if (content && header.getAttribute('aria-expanded') === 'true') {
+                    header.setAttribute('aria-expanded', 'false');
+                    content.setAttribute('aria-hidden', 'true');
+                    content.style.maxHeight = '0';
+                    content.style.paddingTop = '0';
+                    content.style.paddingBottom = '0';
+
+                    // Remover clases de estado activo
+                    header.classList.remove('accordion-active');
+                    header.closest('.accordion-item').classList.remove('accordion-expanded');
+                }
+            }
+        });
+    }
+
+    // Función mejorada para animar la apertura/cierre del acordeón
+    function animateAccordion(content, isOpening, header) {
+        // Limpiar cualquier timeout previo
+        if (content.animationTimeout) {
+            clearTimeout(content.animationTimeout);
+        }
+
+        if (isOpening) {
+            // Preparar para la apertura
+            content.style.display = 'block';
+            content.style.maxHeight = 'none';
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(-10px)';
+
+            // Calcular altura real del contenido
+            const realHeight = content.scrollHeight;
+
+            // Resetear para la animación
+            content.style.maxHeight = '0';
+            content.style.paddingTop = '0';
+            content.style.paddingBottom = '0';
+
+            // Agregar clase para activar animaciones CSS
+            content.classList.add('accordion-opening');
+
+            // Forzar reflow y comenzar animación
+            requestAnimationFrame(() => {
+                content.style.maxHeight = realHeight + 40 + 'px'; // +40px para padding
+                content.style.paddingTop = '1.5rem';
+                content.style.paddingBottom = '1.5rem';
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            });
+
+            // Limpiar después de la animación
+            content.animationTimeout = setTimeout(() => {
+                if (content.getAttribute('aria-hidden') === 'false') {
+                    content.style.maxHeight = 'none';
+                    content.classList.remove('accordion-opening');
+                }
+            }, 400);
+
+            // Agregar efecto de glow al header y contenedor
+            header.classList.add('accordion-active');
+            const accordionItem = header.closest('.accordion-item');
+            accordionItem.classList.add('accordion-expanded');
+
+            // Manejar animación especial para la primera apertura
+            handleFirstOpen(accordionItem);
+
+        } else {
+            // Preparar para el cierre
+            const currentHeight = content.scrollHeight;
+            content.style.maxHeight = currentHeight + 'px';
+            content.classList.add('accordion-closing');
+
+            // Remover efecto de glow del header y contenedor
+            header.classList.remove('accordion-active');
+            header.closest('.accordion-item').classList.remove('accordion-expanded');
+
+            requestAnimationFrame(() => {
+                content.style.maxHeight = '0';
+                content.style.paddingTop = '0';
+                content.style.paddingBottom = '0';
+                content.style.opacity = '0';
+                content.style.transform = 'translateY(-15px)';
+            });
+
+            // Limpiar después del cierre
+            content.animationTimeout = setTimeout(() => {
+                content.style.display = 'none';
+                content.classList.remove('accordion-closing');
+            }, 300);
+        }
+    }
+
+    accordionHeaders.forEach((header, index) => {
+        // Agregar efecto de ripple al hacer click
+        header.addEventListener('click', function (e) {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             const contentId = this.getAttribute('aria-controls');
             const content = document.getElementById(contentId);
 
             if (!content) return;
 
-            // Toggle estado
-            this.setAttribute('aria-expanded', !isExpanded);
-            content.setAttribute('aria-hidden', isExpanded);
+            // Crear efecto ripple
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
 
-            // Animación suave
-            if (!isExpanded) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                content.style.maxHeight = '0';
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(0, 191, 255, 0.2);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: accordionRipple 0.6s ease-out;
+                pointer-events: none;
+                z-index: 1;
+            `;
+
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+
+            // Cerrar otros acordeones (comportamiento de acordeón único)
+            closeOtherAccordions(this);
+
+            // Toggle estado actual
+            const newState = !isExpanded;
+            this.setAttribute('aria-expanded', newState);
+            content.setAttribute('aria-hidden', !newState);
+
+            // Animar
+            animateAccordion(content, newState, this);
+
+            // Scroll suave al acordeón abierto
+            if (newState) {
+                setTimeout(() => {
+                    const headerRect = this.getBoundingClientRect();
+                    const headerTop = window.pageYOffset + headerRect.top;
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+
+                    window.scrollTo({
+                        top: headerTop - headerHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }, 200);
             }
 
-            console.log(`Acordeón ${contentId} ${!isExpanded ? 'abierto' : 'cerrado'}`);
+            console.log(`Acordeón ${contentId} ${newState ? 'abierto' : 'cerrado'}`);
+        });
+
+        // Soporte para navegación por teclado
+        header.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextHeader = accordionHeaders[index + 1] || accordionHeaders[0];
+                nextHeader.focus();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevHeader = accordionHeaders[index - 1] || accordionHeaders[accordionHeaders.length - 1];
+                prevHeader.focus();
+            }
+        });
+
+        // Mejorar accesibilidad con focus visible
+        header.addEventListener('focus', function () {
+            this.style.outline = '2px solid var(--primary)';
+            this.style.outlineOffset = '2px';
+        });
+
+        header.addEventListener('blur', function () {
+            this.style.outline = 'none';
         });
     });
 
+    // Agregar estilos CSS para la animación de ripple
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes accordionRipple {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        .accordion-header {
+            position: relative;
+            overflow: hidden;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Variable para rastrear si es la primera apertura
+    let isFirstOpen = true;
+
+    // Función para manejar la primera apertura especial
+    function handleFirstOpen(accordionItem) {
+        if (isFirstOpen) {
+            accordionItem.classList.add('first-open');
+            isFirstOpen = false;
+
+            // Remover la clase después de la animación
+            setTimeout(() => {
+                accordionItem.classList.remove('first-open');
+            }, 400);
+        }
+    }
+
     // Todos los acordeones inician cerrados
-    console.log(`${accordionHeaders.length} acordeones inicializados (todos cerrados por defecto)`);
+    console.log(`${accordionHeaders.length} acordeones mejorados inicializados (todos cerrados por defecto)`);
 });
