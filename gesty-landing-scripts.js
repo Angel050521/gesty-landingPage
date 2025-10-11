@@ -10,11 +10,46 @@ document.addEventListener('DOMContentLoaded', function () {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
     const isLowEndDevice = navigator.hardwareConcurrency <= 2 || navigator.deviceMemory <= 2;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     // Configurar optimizaciones globales
     if (isMobile || isLowEndDevice) {
         document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
         document.body.classList.add('mobile-optimized');
+    }
+
+    // Deshabilitar hover effects en dispositivos táctiles
+    if (isTouchDevice) {
+        document.body.classList.add('touch-device');
+        
+        // Prevenir activación de hover en touch
+        let touchStartY = 0;
+        let isScrolling = false;
+
+        document.addEventListener('touchstart', function(e) {
+            document.body.classList.add('touching');
+            touchStartY = e.touches[0].clientY;
+            isScrolling = false;
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            const touchY = e.touches[0].clientY;
+            const deltaY = Math.abs(touchY - touchStartY);
+            
+            // Si el usuario se mueve más de 10px verticalmente, es scroll
+            if (deltaY > 10) {
+                isScrolling = true;
+                document.body.classList.add('scrolling');
+            }
+        });
+        
+        document.addEventListener('touchend', function() {
+            setTimeout(() => {
+                document.body.classList.remove('touching');
+                document.body.classList.remove('scrolling');
+                isScrolling = false;
+            }, 300);
+        });
     }
 
     const navToggle = document.querySelector('.nav-toggle');
@@ -255,17 +290,40 @@ document.addEventListener('DOMContentLoaded', function () {
     // Variable para throttling de scroll
     let activeNavTicking = false;
 
-    // Efecto de hover mejorado para los enlaces de navegación
-    const navLinksAll = document.querySelectorAll('.nav-link, .nav-mobile-link');
-    navLinksAll.forEach(link => {
-        link.addEventListener('mouseenter', function () {
-            this.style.setProperty('--hover-scale', '1.05');
-        });
+    // Efecto de hover mejorado para los enlaces de navegación (solo en desktop)
+    if (!isTouchDevice) {
+        const navLinksAll = document.querySelectorAll('.nav-link, .nav-mobile-link');
+        navLinksAll.forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                this.style.setProperty('--hover-scale', '1.05');
+            });
 
-        link.addEventListener('mouseleave', function () {
-            this.style.setProperty('--hover-scale', '1');
+            link.addEventListener('mouseleave', function () {
+                this.style.setProperty('--hover-scale', '1');
+            });
         });
-    });
+    }
+
+    // Manejo especial para cards en dispositivos táctiles
+    if (isTouchDevice) {
+        const cards = document.querySelectorAll('.index-card, .step-card');
+        cards.forEach(card => {
+            // Prevenir hover states persistentes después del touch
+            card.addEventListener('touchend', function() {
+                this.blur();
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.background = '';
+                    this.style.borderColor = '';
+                }, 100);
+            });
+
+            // Feedback visual inmediato en touch
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+        });
+    }
 
     // Indicador de sección activa en el nav - Optimizado
     function updateActiveNavLink() {
