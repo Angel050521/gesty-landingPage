@@ -749,13 +749,6 @@ section {
         transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
-    /* Deshabilitar hover effects en móvil */
-    .nav-link:hover,
-    .index-card:hover,
-    .step-card:hover {
-        transform: none;
-    }
-
     /* Simplificar efectos de glow */
     .hero-logo-glow {
         filter: blur(30px);
@@ -793,12 +786,29 @@ section {
     body {
         -webkit-overflow-scrolling: touch;
         overscroll-behavior: contain;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
         backface-visibility: hidden;
+    }
+
+    /* Mejorar experiencia táctil */
+    .index-card,
+    .step-card,
+    .btn,
+    .nav-mobile-link {
+        -webkit-tap-highlight-color: rgba(0, 191, 255, 0.1);
+        touch-action: manipulation;
+    }
+
+    /* Evitar zoom accidental en inputs */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
     }
 }
 
@@ -920,15 +930,83 @@ section {
     transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
+/* Deshabilitar hover effects en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
 
-    .hero-title:hover,
-    .logo-link:hover .logo-img,
     .index-card:hover,
-    .index-card:hover .index-icon {
-        transform: scale(1.01);
+    .index-card:hover::before,
+    .index-card:hover .index-icon,
+    .step-card:hover,
+    .nav-link:hover,
+    .nav-mobile-link:hover,
+    .btn:hover,
+    .logo-link:hover,
+    .logo-link:hover .logo-img,
+    .logo-link:hover .brand-name,
+    .hero-title:hover,
+    .hero-description:hover,
+    .highlight-item:hover,
+    .stat-item:hover,
+    .feature-badge:hover,
+    .accordion-item:hover,
+    .accordion-header:hover .accordion-icon {
+        transform: none !important;
+        background: inherit !important;
+        border-color: inherit !important;
+        box-shadow: inherit !important;
+        color: inherit !important;
+        text-shadow: none !important;
+        filter: none !important;
     }
 
+    .nav-link::after {
+        width: 0 !important;
+    }
+
+    .btn::before {
+        left: -100% !important;
+    }
+}
+
+/* Estilos específicos para dispositivos táctiles */
+.touch-device .index-card,
+.touch-device .step-card,
+.touch-device .btn,
+.touch-device .nav-link {
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Estados activos para touch (reemplaza hover) */
+.touch-device .index-card:active {
+    background: rgba(0, 191, 255, 0.05);
+    border-color: rgba(0, 191, 255, 0.2);
+}
+
+.touch-device .btn:active {
+    transform: scale(0.98);
+}
+
+.touch-device .nav-mobile-link:active {
+    background: rgba(0, 191, 255, 0.1);
+}
+
+/* Cuando se está tocando o scrolling, deshabilitar hover effects */
+.touching *:hover,
+.scrolling *:hover {
+    transform: none !important;
+    background: inherit !important;
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+}
+
+/* Prevenir hover states durante scroll en móvil */
+.scrolling .index-card,
+.scrolling .step-card,
+.scrolling .btn {
+    transition: none !important;
+}
+
+@media (max-width: 600px) {
     .step-card {
         padding: var(--spacing-md);
         margin-bottom: var(--spacing-md);
@@ -943,8 +1021,6 @@ section {
     .step-title {
         font-size: 1.4rem;
     }
-
-    /* Hover deshabilitado para mejorar navegación móvil */
 
     /* Acordeón mejorado en móviles */
     .accordion-item {
@@ -965,18 +1041,6 @@ section {
         font-size: 0.9rem;
         width: 20px;
         height: 20px;
-    }
-
-    .accordion-item:hover {
-        transform: translateY(-2px);
-    }
-
-    .accordion-header:hover .accordion-icon {
-        transform: scale(1.05);
-    }
-
-    .accordion-header[aria-expanded="true"] .accordion-icon {
-        transform: rotate(180deg) scale(1.05);
     }
 }
 
@@ -1043,7 +1107,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 25% 25%, rgba(0, 191, 255, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 75% 75%, rgba(0, 122, 255, 0.05) 0%, transparent 50%);
     z-index: 0;
